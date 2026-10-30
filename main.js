@@ -1,4 +1,5 @@
 // Imantas Auto Diagnostika - Interactivity Script
+import { allReviews } from './reviews-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Mobile Menu Toggle
@@ -189,9 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const preferredTime = document.getElementById('preferredTime').value.trim() || 'Šodien';
       const phoneNum = document.getElementById('phoneNum').value.trim() || '';
 
-      const message = `Sveiki! Vēlos stāties rindā uz auto diagnostiku Dumbrāja ielā, Imantā (50 EUR / 15 min):
+      const message = `Sveiki! Vēlos stāties rindā uz auto diagnostiku Dumbrāja ielā, Imantā:
 🚗 Auto: ${carMake} (${carYear})
-⚠️ Problēma: ${carIssue}
+⚠️ Problēma / Statuss: ${carIssue}
 ⏰ Vēlamais laiks: ${preferredTime}
 📞 Tālrunis: ${phoneNum}`;
 
@@ -341,6 +342,104 @@ document.addEventListener('DOMContentLoaded', () => {
     scheduleNextCycle();
   }
 
-  // Initialize queue counter
+  // 6. Infinite-Scroll Reviews System (100 Reviews, Loads 5 at a time)
+  function initInfiniteReviews() {
+    const reviewsGrid = document.getElementById('reviewsGrid');
+    const loadMoreBtn = document.getElementById('loadMoreReviewsBtn');
+    const loadingIndicator = document.getElementById('reviewsLoadingIndicator');
+    const countBadge = document.getElementById('reviewsCountBadge');
+    const allLoadedMsg = document.getElementById('allReviewsLoadedMessage');
+    const sentinel = document.getElementById('reviewsSentinel');
+
+    if (!reviewsGrid || !allReviews || !allReviews.length) return;
+
+    let currentIndex = 0;
+    const BATCH_SIZE = 5;
+    let isLoading = false;
+
+    function createReviewCard(review) {
+      const card = document.createElement('div');
+      card.className = 'p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-amber-500/40 transition-all flex flex-col justify-between shadow-xl';
+
+      card.innerHTML = `
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1 text-amber-400 text-sm tracking-wider">
+              ★★★★★
+            </div>
+            <span class="text-[11px] text-slate-500 font-mono">${review.date}</span>
+          </div>
+          
+          <div class="text-xs font-bold text-amber-300/90 bg-amber-500/10 px-2.5 py-1 rounded-lg border border-amber-500/20 inline-block">
+            „${review.highlight}”
+          </div>
+
+          <p class="text-slate-300 text-xs sm:text-sm italic leading-relaxed">
+            "${review.text}"
+          </p>
+        </div>
+
+        <div class="pt-3 border-t border-slate-800/80 flex items-center gap-3">
+          <img src="${review.avatar}" alt="${review.name}" class="w-10 h-10 rounded-full object-cover border border-amber-500/30" loading="lazy">
+          <div class="text-xs">
+            <div class="font-bold text-white">${review.name}</div>
+            <div class="text-amber-400 font-mono text-[11px]">${review.car}</div>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function loadNextBatch() {
+      if (isLoading || currentIndex >= allReviews.length) return;
+      isLoading = true;
+
+      if (loadingIndicator) loadingIndicator.classList.remove('hidden');
+
+      setTimeout(() => {
+        const nextBatch = allReviews.slice(currentIndex, currentIndex + BATCH_SIZE);
+        nextBatch.forEach(review => {
+          reviewsGrid.appendChild(createReviewCard(review));
+        });
+
+        currentIndex += nextBatch.length;
+        if (countBadge) countBadge.textContent = currentIndex;
+
+        if (loadingIndicator) loadingIndicator.classList.add('hidden');
+        isLoading = false;
+
+        if (currentIndex >= allReviews.length) {
+          if (loadMoreBtn) loadMoreBtn.classList.add('hidden');
+          if (allLoadedMsg) allLoadedMsg.classList.remove('hidden');
+        }
+      }, 200);
+    }
+
+    // Initial load: 5 reviews
+    loadNextBatch();
+
+    // Manual load button click
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        loadNextBatch();
+      });
+    }
+
+    // Infinite scroll observer
+    if ('IntersectionObserver' in window && sentinel) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && currentIndex < allReviews.length && !isLoading) {
+          loadNextBatch();
+        }
+      }, {
+        rootMargin: '300px'
+      });
+
+      observer.observe(sentinel);
+    }
+  }
+
+  // Initialize features
   initQueueCounter();
+  initInfiniteReviews();
 });
