@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Call to action inside sample -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-400">
           <span>Šādu skaidru izrakstu tu saņemsi par <strong>katru</strong> sava auto kļūdu!</span>
-          <a href="tel:+37120000000" class="text-amber-400 font-bold hover:underline flex items-center gap-1">
+          <a href="tel:+37126366650" class="text-amber-400 font-bold hover:underline flex items-center gap-1">
             Zvanīt meistaram tagad (50 €) →
           </a>
         </div>
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 📞 Tālrunis: ${phoneNum}`;
 
       const encoded = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/37120000000?text=${encoded}`;
+      const whatsappUrl = `https://wa.me/37126366650?text=${encoded}`;
 
       window.open(whatsappUrl, '_blank');
     });
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scheduleNextCycle();
   }
 
-  // 6. Infinite-Scroll Reviews System (100 Reviews, Loads 5 at a time)
+  // 6. Infinite-Scroll Reviews System (9342 Reviews, Loads 5 at a time)
   function initInfiniteReviews() {
     const reviewsGrid = document.getElementById('reviewsGrid');
     const loadMoreBtn = document.getElementById('loadMoreReviewsBtn');
