@@ -1181,47 +1181,51 @@
 
           </div>
 
-          <!-- Interactive Map visual preview -->
-          <div class="lg:col-span-7 rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden relative min-h-[360px] flex flex-col">
+          <!-- Real Location Street Photo Preview -->
+          <div class="lg:col-span-7 rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden relative min-h-[380px] flex flex-col shadow-2xl group">
             <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
               <span class="text-xs font-mono text-slate-400 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                DUMBRĀJA IELA, IMANTA • ĒRTA PIEBRAUKŠANA
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                DUMBRĀJA IELA, IMANTA • REĀLĀ PIEBRAUKŠANAS VIETA
               </span>
-              <span class="text-xs font-bold text-amber-400">15 MINŪŠU DIAGNOSTIKA</span>
+              <span class="text-xs font-bold text-amber-400">DIAGNOSTIKA UZ IELAS (15 MIN)</span>
             </div>
 
-            <!-- Stylized Map Embed / Graphic -->
-            <div class="relative flex-1 bg-[#0f172a] flex items-center justify-center p-6 text-center">
-              <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#334155_1.5px,transparent_1.5px)] [background-size:20px_20px]"></div>
+            <!-- Real Location Photo with Overlay -->
+            <div class="relative flex-1 min-h-[300px] overflow-hidden bg-slate-950">
+              <img 
+                src="./images/dumbraja-location.jpg" 
+                alt="Reālā diagnostikas vieta uz Dumbrāja ielas Imantā pie mājas" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent"></div>
               
-              <div class="relative space-y-4 max-w-md">
-                <div class="w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-500 text-amber-400 mx-auto flex items-center justify-center shadow-xl animate-float">
-                  <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
-                </div>
-                
-                <div>
-                  <h4 class="text-xl font-extrabold text-white">Imantas Auto Diagnostika</h4>
-                  <p class="text-sm text-slate-300 mt-1 font-medium">Dumbrāja iela, Imanta (Rīga)</p>
-                  <p class="text-xs text-amber-400 font-semibold mt-1">✓ Bezmaksas piebraukšana tieši pie boksa</p>
+              <!-- Location Pointer Overlay -->
+              <div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-xl">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-amber-500 text-black flex items-center justify-center font-black shrink-0 text-base shadow-lg shadow-amber-500/20">
+                    📍
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-extrabold text-white">Piebraukšana Dumbrāja ielā</h4>
+                    <p class="text-xs text-slate-300">Diagnostika notiek tieši šeit uz ielas pie mājas • Ērta piebraukšana un stāvvieta</p>
+                  </div>
                 </div>
 
-                <div class="pt-2 flex flex-wrap justify-center gap-3">
-                  <a href="tel:+37120000000" class="px-5 py-2.5 rounded-xl bg-amber-500 text-black font-extrabold text-xs hover:bg-amber-400 transition-colors">
-                    Zvanīt un ieņemt rindu
+                <div class="flex items-center gap-2">
+                  <a href="https://waze.com/ul?q=Dumbraja%20iela%20Imanta%20Riga" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-cyan-500 text-black font-extrabold text-xs hover:bg-cyan-400 transition-colors">
+                    Waze navigācija
                   </a>
-                  <a href="https://wa.me/37120000000?text=Sveiki!%20Vēlos%20stāties%20rindā%20uz%20diagnostiku%20Dumbrāja%20ielā." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-500 text-black font-extrabold text-xs hover:bg-emerald-400 transition-colors">
-                    WhatsApp ziņa
+                  <a href="tel:+37120000000" class="px-4 py-2 rounded-xl bg-amber-500 text-black font-extrabold text-xs hover:bg-amber-400 transition-colors">
+                    Zvanīt piebraucot
                   </a>
                 </div>
               </div>
             </div>
 
             <div class="p-3 bg-slate-950 border-t border-slate-800 text-center text-[11px] text-slate-400">
-              💡 Padoms: Šobrīd rindā gaida <span class="queueLiveCount text-amber-400 font-bold">18</span> auto. Zvani vai raksti pirms braukšanas!
+              💡 Padoms: Šobrīd rindā gaida <span class="queueLiveCount text-amber-400 font-bold">18</span> auto. Piebrauc pie šīs mājas uz Dumbrāja ielas!
             </div>
           </div>
 
