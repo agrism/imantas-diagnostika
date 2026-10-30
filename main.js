@@ -113,44 +113,44 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- 3-box breakdown -->
         <div class="grid md:grid-cols-3 gap-4">
           
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
-            <div class="text-xs font-bold text-amber-600 uppercase tracking-wide flex items-center gap-1.5">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 shadow-sm">
+            <div class="text-xs font-black text-red-900 uppercase tracking-wide flex items-center gap-1.5">
               <span>⚠️</span> Simptomi dzīvē
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed">${item.symptom}</p>
+            <p class="text-xs text-slate-800 leading-relaxed font-medium">${item.symptom}</p>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
-            <div class="text-xs font-bold text-cyan-600 uppercase tracking-wide flex items-center gap-1.5">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 shadow-sm">
+            <div class="text-xs font-black text-blue-900 uppercase tracking-wide flex items-center gap-1.5">
               <span>💬</span> Vienkāršā valodā
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed">${item.plainMeaning}</p>
+            <p class="text-xs text-slate-800 leading-relaxed font-medium">${item.plainMeaning}</p>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
-            <div class="text-xs font-bold text-emerald-600 uppercase tracking-wide flex items-center gap-1.5">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 shadow-sm">
+            <div class="text-xs font-black text-emerald-900 uppercase tracking-wide flex items-center gap-1.5">
               <span>🔍</span> Biežākais cēlonis
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed">${item.commonCause}</p>
+            <p class="text-xs text-slate-800 leading-relaxed font-medium">${item.commonCause}</p>
           </div>
 
         </div>
 
         <!-- Recommendation / Meistara padoms -->
-        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3">
-          <div class="w-8 h-8 rounded-lg bg-amber-500 text-black flex items-center justify-center font-black shrink-0 text-sm mt-0.5">
+        <div class="p-4 rounded-2xl bg-amber-50/90 border-2 border-amber-300 flex items-start gap-3 shadow-sm">
+          <div class="w-8 h-8 rounded-lg bg-amber-500 text-black flex items-center justify-center font-black shrink-0 text-sm mt-0.5 shadow-sm">
             💡
           </div>
           <div class="text-xs space-y-1">
-            <div class="font-bold text-amber-800 uppercase tracking-wide">Meistara ieteikums tavam makam:</div>
-            <p class="text-slate-200 leading-relaxed">${item.advice}</p>
+            <div class="font-black text-red-900 uppercase tracking-wide">Meistara ieteikums tavam makam:</div>
+            <p class="text-slate-900 font-semibold leading-relaxed">${item.advice}</p>
           </div>
         </div>
 
         <!-- Call to action inside sample -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-600">
-          <span>Šādu skaidru izrakstu tu saņemsi par <strong>katru</strong> sava auto kļūdu!</span>
-          <a href="tel:+37126366650" class="text-amber-600 font-bold hover:underline flex items-center gap-1">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-800 font-medium">
+          <span>Šādu skaidru izrakstu tu saņemsi par <strong class="text-slate-900">katru</strong> sava auto kļūdu!</span>
+          <a href="tel:+37126366650" class="text-red-700 font-black hover:underline flex items-center gap-1">
             Zvanīt meistaram tagad (50 €) →
           </a>
         </div>
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
             „${review.highlight}”
           </div>
 
-          <p class="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
+          <p class="text-slate-900 text-xs sm:text-sm italic leading-relaxed font-medium">
             "${review.text}"
           </p>
         </div>
