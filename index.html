@@ -60,7 +60,7 @@
 
   <link rel="stylesheet" href="./style.css">
 </head>
-<body class="bg-[#0b1220] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col pb-24 md:pb-0">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col pb-24 md:pb-0">
 
   <!-- Top Announcement Bar -->
   <aside aria-label="Paziņojums" class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-500 text-black text-xs font-semibold py-2 px-4 shadow-md overflow-hidden">
@@ -85,7 +85,7 @@
   </aside>
 
   <!-- Navigation -->
-  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#0b1220]/95 border-b border-slate-700/60 transition-all">
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-white/95 border-b border-slate-200 backdrop-blur-xl transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Logo -->
@@ -97,24 +97,24 @@
           </svg>
         </div>
         <div>
-          <span class="block text-base sm:text-lg font-black tracking-tight text-white group-hover:text-amber-400 transition-colors whitespace-nowrap">
+          <span class="block text-base sm:text-lg font-black tracking-tight text-white group-hover:text-amber-600 transition-colors whitespace-nowrap">
             IMANTAS AUTO <span class="text-amber-400">DIAGNOSTIKA</span>
           </span>
-          <span class="hidden sm:block text-[11px] text-slate-400 font-medium tracking-wide whitespace-nowrap">
+          <span class="hidden sm:block text-[11px] text-slate-500 font-medium tracking-wide whitespace-nowrap">
             15 min • Kļūdu nolasīšana & atšifrējums • 50 €
           </span>
         </div>
       </a>
 
       <!-- Desktop Nav (Visible on xl screens to avoid cramped elements) -->
-      <nav class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-300 shrink-0">
-        <a href="#ka-tas-notiek" class="hover:text-amber-400 transition-colors whitespace-nowrap">Kā tas notiek</a>
-        <a href="#kas-ieklauts" class="hover:text-amber-400 transition-colors whitespace-nowrap">Kas iekļauts</a>
-        <a href="#kludu-paraugs" class="hover:text-amber-400 transition-colors whitespace-nowrap">Kļūdu paraugs</a>
-        <a href="#salidzinajums" class="hover:text-amber-400 transition-colors whitespace-nowrap">Kāpēc mēs</a>
-        <a href="#atsauksmes" class="hover:text-amber-400 transition-colors whitespace-nowrap">Atsauksmes</a>
-        <a href="#faq" class="hover:text-amber-400 transition-colors whitespace-nowrap">BUJ</a>
-        <a href="#kontakti" class="hover:text-amber-400 transition-colors whitespace-nowrap">Kontakti</a>
+      <nav class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-700 shrink-0">
+        <a href="#ka-tas-notiek" class="hover:text-amber-600 transition-colors whitespace-nowrap">Kā tas notiek</a>
+        <a href="#kas-ieklauts" class="hover:text-amber-600 transition-colors whitespace-nowrap">Kas iekļauts</a>
+        <a href="#kludu-paraugs" class="hover:text-amber-600 transition-colors whitespace-nowrap">Kļūdu paraugs</a>
+        <a href="#salidzinajums" class="hover:text-amber-600 transition-colors whitespace-nowrap">Kāpēc mēs</a>
+        <a href="#atsauksmes" class="hover:text-amber-600 transition-colors whitespace-nowrap">Atsauksmes</a>
+        <a href="#faq" class="hover:text-amber-600 transition-colors whitespace-nowrap">BUJ</a>
+        <a href="#kontakti" class="hover:text-amber-600 transition-colors whitespace-nowrap">Kontakti</a>
       </nav>
 
       <!-- CTA Buttons & Hamburger -->
@@ -134,7 +134,7 @@
         </a>
 
         <!-- Mobile / Tablet Hamburger Button -->
-        <button id="mobileMenuBtn" aria-label="Atvērt izvēlni" class="xl:hidden p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">
+        <button id="mobileMenuBtn" aria-label="Atvērt izvēlni" class="xl:hidden p-2 rounded-xl bg-slate-100 text-slate-700 hover:text-black hover:bg-slate-200 border border-slate-300 transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -144,16 +144,16 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden xl:hidden border-b border-slate-800 bg-[#0b101c] px-4 pt-3 pb-6 space-y-3">
-      <a href="#ka-tas-notiek" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">Kā tas notiek</a>
-      <a href="#kas-ieklauts" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">Kas iekļauts (50€)</a>
-      <a href="#kludu-paraugs" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">Kļūdu paraugs</a>
-      <a href="#salidzinajums" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">Kāpēc mēs</a>
-      <a href="#atsauksmes" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">Atsauksmes (9342+)</a>
-      <a href="#faq" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">BUJ</a>
-      <a href="#kontakti" class="mobile-nav-link block py-2 text-slate-300 hover:text-amber-400 font-medium">Kontakti</a>
+    <div id="mobileMenu" class="hidden xl:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 border-b border-slate-200">
+      <a href="#ka-tas-notiek" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">Kā tas notiek</a>
+      <a href="#kas-ieklauts" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">Kas iekļauts (50€)</a>
+      <a href="#kludu-paraugs" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">Kļūdu paraugs</a>
+      <a href="#salidzinajums" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">Kāpēc mēs</a>
+      <a href="#atsauksmes" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">Atsauksmes (9342+)</a>
+      <a href="#faq" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">BUJ</a>
+      <a href="#kontakti" class="mobile-nav-link block py-2 text-slate-700 hover:text-amber-600 font-medium">Kontakti</a>
       
-      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+      <div class="pt-3 border-t border-slate-200 flex flex-col gap-2">
         <a href="tel:+37126366650" class="w-full text-center py-3 rounded-xl bg-amber-500 text-black font-bold">
           Zvanīt: +371 26 366 650
         </a>
@@ -176,8 +176,8 @@
           loading="eager"
         />
         <!-- Lighter gradient overlay so master and background are brighter -->
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1220] via-black/20 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#0b1220]/80 via-black/25 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-900/20 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/30 to-transparent"></div>
         
         <!-- Slogan Overlay (adjusted size so it doesn't cover master) -->
         <div class="absolute inset-0 flex items-center justify-start">
@@ -186,10 +186,10 @@
               <span class="inline-block px-3 py-1 rounded-lg bg-red-600/90 text-white font-black text-xs sm:text-sm uppercase tracking-wider mb-2 sm:mb-3 shadow-lg">
                 Svarīgi zināt
               </span>
-              <h2 class="text-2xl sm:text-4xl md:text-5xl font-black uppercase leading-tight tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
-                <span class="text-red-400">Imantas hakeris?</span>
+              <h2 class="text-2xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+                <span class="text-red-400">Imantas HAKERIS?</span>
                 <br/>
-                <span class="text-amber-400">NĒ, te Imantas diagnostiķis!</span>
+                <span class="text-amber-400">NĒ, te Imantas DIAGNOSTIĶIS!</span>
               </h2>
             </div>
           </div>
@@ -199,7 +199,7 @@
       <!-- Content below hero image -->
       <div class="relative pt-8 pb-16 md:py-20 lg:py-24">
       <!-- Background decorative glow and grid -->
-      <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-25"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-25"></div>
       <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-amber-500/20 via-orange-500/10 to-transparent blur-[120px] pointer-events-none"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,18 +210,18 @@
             
             <!-- Live Availability & Urgency Queue Box -->
             <div class="space-y-3">
-              <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 shadow-inner">
+              <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
                 <span class="relative flex h-3 w-3">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                 </span>
-                <span class="text-xs md:text-sm font-semibold text-slate-300">
+                <span class="text-xs md:text-sm font-semibold text-slate-700">
                   Pieejams šodien Imantā, Dumbrāja ielā
                 </span>
               </div>
 
               <!-- High Demand Queue Banner -->
-              <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-red-950/60 via-slate-900 to-amber-950/40 border border-red-500/40 text-left shadow-xl space-y-2">
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-red-50 via-white to-amber-50 border border-red-200 text-left shadow-md space-y-2">
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2">
                     <span class="relative flex h-3 w-3">
@@ -232,23 +232,23 @@
                       Liela noslodze • Stājies rindā laicīgi!
                     </span>
                   </div>
-                  <span class="text-[10px] font-mono text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-800">
+                  <span class="text-[10px] font-mono text-slate-400 bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-500">
                     Live rinda
                   </span>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
-                  <div class="text-sm font-bold text-white flex items-center gap-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-200">
+                  <div class="text-sm font-bold text-slate-900 flex items-center gap-2">
                     <span>Šobrīd rindā gaida:</span>
                     <span class="queueLiveCount text-2xl font-black text-amber-400 font-mono px-2 py-0.5 rounded-lg bg-amber-500/10 border border-amber-500/30">18</span>
-                    <span class="text-xs text-slate-300 font-medium">cilvēki / auto</span>
+                    <span class="text-xs text-slate-600 font-medium">cilvēki / auto</span>
                   </div>
-                  <div class="text-xs text-amber-300 font-bold bg-amber-500/15 px-3 py-1 rounded-xl border border-amber-500/30 inline-flex items-center gap-1.5 self-start sm:self-auto">
+                  <div class="text-xs text-amber-600 font-bold bg-amber-500/15 px-3 py-1 rounded-xl border border-amber-500/30 inline-flex items-center gap-1.5 self-start sm:self-auto">
                     <span>⏱️</span> ~15 min uz auto
                   </div>
                 </div>
 
-                <p class="text-[11px] text-slate-400 leading-normal">
+                <p class="text-[11px] text-slate-600 leading-normal">
                   Rindā vietas mainās ik pēc 5 minūtēm. Lai lieki nestāvētu uz ielas, <strong>piesaki savu vietu laicīgi</strong> pirms izbraukšanas!
                 </p>
               </div>
@@ -256,7 +256,7 @@
 
 
             <!-- Main Heading -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
               Piebrauc. <br class="hidden sm:inline"/>
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-300">
                 Noskenējam kļūdas.
@@ -265,26 +265,26 @@
             </h1>
 
             <!-- Subtitle -->
-            <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p class="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
               Iedegās <span class="text-amber-400 font-semibold underline decoration-amber-500/40">Check Engine</span>, zuda jauda vai gatavojies tehniskajai apskatei? Pieslēdzam dīlera līmeņa skaneri, nolasām visus blokus un izskaidrojam visu saprotamā latviešu valodā.
             </p>
 
             <!-- Price & Speed Highlights Pills -->
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 pt-2">
-              <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-amber-500/40 text-left shadow-lg">
+              <div class="p-3.5 rounded-2xl bg-white border border-amber-300 text-left shadow-md">
                 <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider">Fiksēta cena</div>
-                <div class="text-2xl sm:text-3xl font-black text-white mt-0.5">50 <span class="text-lg text-amber-400 font-bold">EUR</span></div>
-                <div class="text-[11px] text-slate-400">Bez slēptām izmaksām</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">50 <span class="text-lg text-amber-400 font-bold">EUR</span></div>
+                <div class="text-[11px] text-slate-500">Bez slēptām izmaksām</div>
               </div>
-              <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-cyan-500/30 text-left shadow-lg">
+              <div class="p-3.5 rounded-2xl bg-white border border-cyan-300 text-left shadow-md">
                 <div class="text-xs text-cyan-400 font-semibold uppercase tracking-wider">Atrums</div>
-                <div class="text-2xl sm:text-3xl font-black text-white mt-0.5">15 <span class="text-lg text-cyan-400 font-bold">MIN</span></div>
-                <div class="text-[11px] text-slate-400">Gatavs uz vietas</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">15 <span class="text-lg text-cyan-400 font-bold">MIN</span></div>
+                <div class="text-[11px] text-slate-500">Gatavs uz vietas</div>
               </div>
-              <div class="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-slate-900/90 border border-slate-700 text-left shadow-lg">
+              <div class="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-white border border-emerald-300 text-left shadow-md">
                 <div class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Atskaite</div>
-                <div class="text-2xl sm:text-3xl font-black text-white mt-0.5">PDF / WA</div>
-                <div class="text-[11px] text-slate-400">Nosūtām uz telefonu</div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-900 mt-0.5">PDF / WA</div>
+                <div class="text-[11px] text-slate-500">Nosūtām uz telefonu</div>
               </div>
             </div>
 
@@ -296,7 +296,7 @@
                 </svg>
                 Zvanīt meistaram tagad
               </a>
-              <a href="#pieteikums" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-slate-800/90 hover:bg-slate-750 border border-slate-700 text-white font-bold text-base transition-all flex items-center justify-center gap-2 hover:border-slate-500">
+              <a href="#pieteikums" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold text-base transition-all flex items-center justify-center gap-2 hover:border-slate-400 shadow-sm">
                 <span>Pieteikt vizīti internetā</span>
                 <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
@@ -305,7 +305,7 @@
             </div>
 
             <!-- Trust micro indicators & Police/Medic Discount Pill -->
-            <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-slate-400">
+            <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-slate-600">
               <span class="flex items-center gap-1.5">
                 <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                 Visas auto markas no 2000. gada
@@ -322,7 +322,7 @@
 
             <!-- Police & Medical Personnel Discount Announcement Pill -->
             <div class="pt-1">
-              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-900 text-xs font-semibold">
                 <span>👮‍♂️ Policistiem & 🩺 Medpersonālam:</span>
                 <span class="text-amber-400 font-extrabold underline">Īpaša atlaide (tikai 40 €)!</span>
                 <span class="text-slate-400 hidden sm:inline">• Paldies par jūsu darbu!</span>
@@ -339,7 +339,7 @@
               <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 to-orange-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
               
               <!-- Main Photo Card: Technician with Laptop & OBD2 cable -->
-              <div class="relative rounded-2xl bg-slate-900 border border-slate-700/80 overflow-hidden shadow-2xl group">
+              <div class="relative rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-xl group">
                 <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950">
                   <img 
                     src="./images/mechanic-laptop-obd2.jpg" 
@@ -357,28 +357,28 @@
                   </div>
 
                   <!-- Floating Bottom Price Tag -->
-                  <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 text-xs">
+                  <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700 text-xs text-white">
                     <div class="flex items-center gap-2">
                       <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">
                         ⚡
                       </div>
                       <div>
                         <div class="font-bold text-white">Diagnostika uz vietas</div>
-                        <div class="text-[11px] text-slate-400">15 minūtes • Imanta</div>
+                        <div class="text-[11px] text-slate-500">15 minūtes • Imanta</div>
                       </div>
                     </div>
                     <div class="text-right">
                       <div class="font-black text-amber-400 text-sm">50 EUR</div>
-                      <div class="text-[10px] text-slate-400">fiksēta cena</div>
+                      <div class="text-[10px] text-slate-600">fiksēta cena</div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Live Scanner Terminal Below Photo -->
-                <div class="p-4 bg-slate-900 space-y-3 border-t border-slate-800">
+                <div class="p-4 bg-slate-50 space-y-3 border-t border-slate-200">
                   
-                  <div class="flex items-center justify-between font-mono text-[11px] text-slate-400 pb-2 border-b border-slate-800">
-                    <span class="flex items-center gap-1.5 text-white font-semibold">
+                  <div class="flex items-center justify-between font-mono text-[11px] text-slate-500 pb-2 border-b border-slate-200">
+                    <span class="flex items-center gap-1.5 text-slate-800 font-semibold">
                       <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                       OBD-II LIVE TELEMETRY
                     </span>
@@ -386,12 +386,12 @@
                   </div>
 
                   <!-- Sample detected code pill -->
-                  <div class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between text-xs">
+                  <div class="p-2.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between text-xs">
                     <div class="flex items-center gap-2.5">
                       <span class="px-2 py-0.5 rounded font-mono font-bold bg-amber-950 text-amber-400 border border-amber-800/60 text-[11px]">
                         P0420
                       </span>
-                      <span class="text-slate-300 font-medium truncate max-w-[200px] sm:max-w-xs">
+                      <span class="text-slate-700 font-medium truncate max-w-[200px] sm:max-w-xs">
                         Katalizatora efektivitāte (Lambda 2)
                       </span>
                     </div>
@@ -419,17 +419,17 @@
     </section>
 
     <!-- SECTION: KĀ TAS NOTIEK (THE 15-MINUTE PROMISE) -->
-    <section id="ka-tas-notiek" class="py-16 md:py-24 bg-[#0b101c] border-y border-slate-800/80 relative">
+    <section id="ka-tas-notiek" class="py-16 md:py-24 bg-slate-100/70 border-y border-slate-200 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto space-y-4">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider">
             ⏱️ TIEŠI 15 MINŪTES
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Kā notiek diagnostika uz vietas Imantā?
           </h2>
-          <p class="text-slate-300 text-base sm:text-lg">
+          <p class="text-slate-600 text-base sm:text-lg">
             Nekādas gaidīšanas rindās un mistisku stundu rēķināšanas. Tu piebrauc, meistars pieslēdzas, un 15 minūtēs tu zini precīzu sava auto stāvokli.
           </p>
         </div>
@@ -438,89 +438,89 @@
         <div class="grid md:grid-cols-4 gap-6 mt-14">
           
           <!-- Step 1 -->
-          <div class="relative p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between group hover:border-amber-500/50 transition-all">
+          <div class="relative p-6 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between group hover:border-amber-400 hover:shadow-lg transition-all shadow-sm">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-2xl font-black text-amber-400">01</span>
-                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 font-mono text-xs font-semibold">Min 0 - 2</span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-mono text-xs font-semibold border border-slate-200">Min 0 - 2</span>
               </div>
               <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-white">Piebrauc Imantā</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <h3 class="text-lg font-bold text-slate-900">Piebrauc Imantā</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
                 Piebrauc ar auto norādītajā adresē Imantā. Meistars pieslēdz dīlera līmeņa diagnostikas iekārtu pie tavas mašīnas OBD-II ligzdas.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-800/80 text-xs text-amber-400 font-medium">
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-amber-400 font-medium">
               Nav jānodod atslēgas uz visu dienu
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="relative p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between group hover:border-amber-500/50 transition-all">
+          <div class="relative p-6 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between group hover:border-amber-400 hover:shadow-lg transition-all shadow-sm">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-2xl font-black text-amber-400">02</span>
-                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 font-mono text-xs font-semibold">Min 2 - 7</span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-mono text-xs font-semibold border border-slate-200">Min 2 - 7</span>
               </div>
               <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-white">Dziļā visu bloku skenēšana</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <h3 class="text-lg font-bold text-slate-900">Dziļā visu bloku skenēšana</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
                 Nolasām dzinēju, automātisko kārbu, ABS/ESP, drošības spilvenus (Airbag), DPF filtru, klimatu un borta elektroniku.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-800/80 text-xs text-cyan-400 font-medium">
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-cyan-400 font-medium">
               Visi vadības bloki, nevis tikai dzinējs
             </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="relative p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between group hover:border-amber-500/50 transition-all">
+          <div class="relative p-6 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between group hover:border-amber-400 hover:shadow-lg transition-all shadow-sm">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-2xl font-black text-amber-400">03</span>
-                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 font-mono text-xs font-semibold">Min 7 - 11</span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-mono text-xs font-semibold border border-slate-200">Min 7 - 11</span>
               </div>
               <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-white">Live Data & analīze</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <h3 class="text-lg font-bold text-slate-900">Live Data & analīze</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
                 Pārbaudām reāllaika rādījumus: spiedienus, degvielas korekcijas, sensorus un noteiktās kļūdas cēloni, nevis tikai simptomu.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-800/80 text-xs text-orange-400 font-medium">
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-orange-400 font-medium">
               Skaidrojums bez sarežģīta žargona
             </div>
           </div>
 
           <!-- Step 4 -->
-          <div class="relative p-6 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between group hover:border-amber-500/50 transition-all">
+          <div class="relative p-6 rounded-2xl bg-white border border-slate-200 flex flex-col justify-between group hover:border-amber-400 hover:shadow-lg transition-all shadow-sm">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="font-mono text-2xl font-black text-amber-400">04</span>
-                <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 font-mono text-xs font-semibold">Min 11 - 15</span>
+                <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-mono text-xs font-semibold border border-slate-200">Min 11 - 15</span>
               </div>
               <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-white">Atskaite & Kļūdu dzēšana</h3>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <h3 class="text-lg font-bold text-slate-900">Atskaite & Kļūdu dzēšana</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
                 Nodzēšam kļūdas (ja atļauts), nosūtām pilnu atskaiti uz tavu WhatsApp/e-pastu un pasakām, ko tieši darīt tālāk.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-slate-800/80 text-xs text-emerald-400 font-medium">
+            <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-emerald-400 font-medium">
               Gatavs! 50 € un dodies tālāk
             </div>
           </div>
@@ -540,11 +540,11 @@
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold uppercase tracking-wider">
               💶 PILNS PAKALPOJUMA KOMPLEKTS
             </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
               Kas tieši ir iekļauts <br/>
               <span class="text-amber-400">50 EUR cenā?</span>
             </h2>
-            <p class="text-slate-300 text-base leading-relaxed">
+            <p class="text-slate-600 text-base leading-relaxed">
               Daudzos servisos tev paprasīs 40-70 € tikai par pieslēgšanos un nepaskaidros neko. Mūsu pieeja ir pavisam cita: fiksēti 50 €, pilna atskaite un cilvēcīgs skaidrojums.
             </p>
 
@@ -569,7 +569,7 @@
                 </span>
               </div>
               <h4 class="text-white font-extrabold text-base">Atlaides dienestiem un meitenēm sarkanos peldkostīmos</h4>
-              <p class="text-slate-300 text-xs leading-relaxed">
+              <p class="text-slate-600 text-xs leading-relaxed">
                 Pateicībā par darbu: Valsts un Pašvaldības policistiem, visiem mediķiem (NMPD, ārstiem, medmāsām) — pilna auto diagnostika ar <strong>20% atlaidi (40 EUR vietā 50 EUR)</strong>! Kā arī īpašs bonuss: <strong>meitenēm sarkanos peldkostīmos — garantēta atlaide uzreiz!</strong>
               </p>
             </div>
@@ -585,7 +585,7 @@
           <div class="lg:col-span-7">
             <div class="grid sm:grid-cols-2 gap-4">
               
-              <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-2.5">
                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                   ✓
                 </div>
@@ -595,7 +595,7 @@
                 </p>
               </div>
 
-              <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-2.5">
                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                   ✓
                 </div>
@@ -605,7 +605,7 @@
                 </p>
               </div>
 
-              <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-2.5">
                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                   ✓
                 </div>
@@ -615,7 +615,7 @@
                 </p>
               </div>
 
-              <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-2.5">
                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                   ✓
                 </div>
@@ -625,7 +625,7 @@
                 </p>
               </div>
 
-              <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-2.5">
                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                   ✓
                 </div>
@@ -635,7 +635,7 @@
                 </p>
               </div>
 
-              <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow space-y-2.5">
                 <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">
                   ✓
                 </div>
@@ -648,7 +648,7 @@
             </div>
 
             <!-- Visual Feature Banner: OBD2 Connection & Diagnostic Laptop -->
-            <div class="mt-6 rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden shadow-xl grid md:grid-cols-12 gap-0 items-center">
+            <div class="mt-6 rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-md grid md:grid-cols-12 gap-0 items-center">
               <div class="md:col-span-5 h-48 md:h-full min-h-[180px] relative overflow-hidden bg-slate-950">
                 <img 
                   src="./images/obd2-connection-laptop.jpg" 
@@ -666,7 +666,7 @@
                   <span>⚡</span> PROFESIONĀLA APARATŪRA
                 </div>
                 <h4 class="text-sm sm:text-base font-extrabold text-white">Tiešais pieslēgums borta datoram</h4>
-                <p class="text-xs text-slate-300 leading-relaxed">
+                <p class="text-xs text-slate-600 leading-relaxed">
                   Pieslēdzamies ar specializētu OBD2 kabeli un portatīvo datoru tieši pie tavas automašīnas vadības blokiem. Nolasām reālos parametrus bez minēšanas.
                 </p>
                 <div class="pt-1 text-[11px] text-emerald-400 font-semibold flex items-center gap-2">
@@ -684,39 +684,39 @@
     </section>
 
     <!-- SECTION: INTERACTIVE ERROR CODE SIMULATOR / PARAUGA APSKATE -->
-    <section id="kludu-paraugs" class="py-16 md:py-24 bg-[#0b101c] border-y border-slate-800/80">
+    <section id="kludu-paraugs" class="py-16 md:py-24 bg-slate-100/70 border-y border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold uppercase tracking-wider">
             🔍 INTERAKTĪVAIS PARAUGS
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Kādu kļūdu aprakstu tu saņemsi?
           </h2>
-          <p class="text-slate-300 text-sm sm:text-base">
+          <p class="text-slate-600 text-sm sm:text-base">
             Izvēlies vienu no biežākajām auto kļūdām un apskati, cik skaidru un praktiski noderīgu informāciju mēs tev sagatavosim:
           </p>
         </div>
 
         <!-- Simulator Interface -->
-        <div class="max-w-4xl mx-auto bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200 p-6 md:p-8 shadow-xl">
           
           <!-- Code Selector Tabs -->
-          <div class="flex flex-wrap items-center justify-center gap-2 pb-6 border-b border-slate-800" id="errorCodeTabs">
+          <div class="flex flex-wrap items-center justify-center gap-2 pb-6 border-b border-slate-200" id="errorCodeTabs">
             <button class="error-tab-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-amber-500 text-black border-amber-500 shadow-lg shadow-amber-500/20" data-code="P0420">
               P0420 (Katalizators)
             </button>
-            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500" data-code="P0300">
+            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200" data-code="P0300">
               P0300 / P0302 (Misfire)
             </button>
-            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500" data-code="P0171">
+            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200" data-code="P0171">
               P0171 (Liess maisījums)
             </button>
-            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500" data-code="DF025">
+            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200" data-code="DF025">
               DF025 / DPF (Kvēpu filtrs)
             </button>
-            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-500" data-code="ABS01276">
+            <button class="error-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all border bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200" data-code="ABS01276">
               ABS 01276 (Sensors)
             </button>
           </div>
@@ -739,18 +739,18 @@
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider">
             ⚖️ GODĪGS SALĪDZINĀJUMS
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Kāpēc autovadītāji izvēlas Imantas Auto Diagnostiku?
           </h2>
-          <p class="text-slate-300 text-sm sm:text-base">
+          <p class="text-slate-600 text-sm sm:text-base">
             Salīdzini, kā notiek auto kļūdu lasīšana pie mums un parastajos servisos:
           </p>
         </div>
 
         <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse bg-slate-900 rounded-2xl overflow-hidden border border-slate-800">
+          <table class="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <thead>
-              <tr class="border-b border-slate-800 bg-slate-950/60 text-xs font-bold tracking-wider text-slate-400 uppercase">
+              <tr class="border-b border-slate-200 bg-slate-100 text-xs font-bold tracking-wider text-slate-700 uppercase">
                 <th class="py-4 px-6">Kritērijs</th>
                 <th class="py-4 px-6 text-amber-400 bg-amber-500/10 border-x border-amber-500/20">
                   ⚡ IMANTAS AUTO DIAGNOSTIKA
@@ -762,43 +762,43 @@
             <tbody class="divide-y divide-slate-800/80 text-sm">
               <tr>
                 <td class="py-4 px-6 font-semibold text-white">Cena</td>
-                <td class="py-4 px-6 font-bold text-amber-400 bg-amber-500/5 border-x border-amber-500/20">
+                <td class="py-4 px-6 font-bold text-amber-400 bg-amber-50/40 border-x border-amber-200">
                   50 € fiksēti (bez slēptām maksām)
                 </td>
-                <td class="py-4 px-6 text-slate-400">40 € – 80 € + mistiskas darba stundas</td>
-                <td class="py-4 px-6 text-slate-400">100 € – 180 € + PVN</td>
+                <td class="py-4 px-6 text-slate-600">40 € – 80 € + mistiskas darba stundas</td>
+                <td class="py-4 px-6 text-slate-600">100 € – 180 € + PVN</td>
               </tr>
               <tr>
                 <td class="py-4 px-6 font-semibold text-white">Patērētais laiks</td>
-                <td class="py-4 px-6 font-bold text-emerald-400 bg-amber-500/5 border-x border-amber-500/20">
+                <td class="py-4 px-6 font-bold text-emerald-400 bg-amber-50/40 border-x border-amber-200">
                   ⚡ 15 minūtes uz vietas
                 </td>
-                <td class="py-4 px-6 text-slate-400">Auto jāatstāj uz visu dienu</td>
-                <td class="py-4 px-6 text-slate-400">Pieraksts pēc 1-3 nedēļām</td>
+                <td class="py-4 px-6 text-slate-600">Auto jāatstāj uz visu dienu</td>
+                <td class="py-4 px-6 text-slate-600">Pieraksts pēc 1-3 nedēļām</td>
               </tr>
               <tr>
                 <td class="py-4 px-6 font-semibold text-white">Klātbūtne procesā</td>
-                <td class="py-4 px-6 font-medium text-white bg-amber-500/5 border-x border-amber-500/20">
+                <td class="py-4 px-6 font-medium text-white bg-amber-50/40 border-x border-amber-200">
                   Stāvi blakus vai sēdi savā auto
                 </td>
-                <td class="py-4 px-6 text-slate-400">Bieži nelaiž iekšā remonta zonā</td>
-                <td class="py-4 px-6 text-slate-400">Tikai sēdi uzgaidāmajā telpā</td>
+                <td class="py-4 px-6 text-slate-600">Bieži nelaiž iekšā remonta zonā</td>
+                <td class="py-4 px-6 text-slate-600">Tikai sēdi uzgaidāmajā telpā</td>
               </tr>
               <tr>
                 <td class="py-4 px-6 font-semibold text-white">Kļūdu apraksts</td>
-                <td class="py-4 px-6 font-bold text-cyan-400 bg-amber-500/5 border-x border-amber-500/20">
+                <td class="py-4 px-6 font-bold text-cyan-400 bg-amber-50/40 border-x border-amber-200">
                   Skaidrs izraksts latviski + WhatsApp/PDF
                 </td>
-                <td class="py-4 px-6 text-slate-400">Bieži pasaka tikai "jāmaina pusmotors"</td>
-                <td class="py-4 px-6 text-slate-400">Drukāta atskaite bez cilvēcīga skaidrojuma</td>
+                <td class="py-4 px-6 text-slate-600">Bieži pasaka tikai "jāmaina pusmotors"</td>
+                <td class="py-4 px-6 text-slate-600">Drukāta atskaite bez cilvēcīga skaidrojuma</td>
               </tr>
               <tr>
                 <td class="py-4 px-6 font-semibold text-white">Interešu konflikts</td>
-                <td class="py-4 px-6 font-bold text-emerald-400 bg-amber-500/5 border-x border-amber-500/20">
+                <td class="py-4 px-6 font-bold text-emerald-400 bg-amber-50/40 border-x border-amber-200">
                   Objektīva diagnostika (nemēģinām uzspiest dārgu remontu)
                 </td>
-                <td class="py-4 px-6 text-slate-400">Cenšas atrast jebko, ko dārgāk nomainīt</td>
-                <td class="py-4 px-6 text-slate-400">Piedāvā tikai dārgas jaunas detaļas</td>
+                <td class="py-4 px-6 text-slate-600">Cenšas atrast jebko, ko dārgāk nomainīt</td>
+                <td class="py-4 px-6 text-slate-600">Piedāvā tikai dārgas jaunas detaļas</td>
               </tr>
             </tbody>
           </table>
@@ -808,40 +808,40 @@
     </section>
 
     <!-- SECTION: ATBALSTĪTIE AUTO -->
-    <section class="py-12 bg-[#0b101c] border-y border-slate-800">
+    <section class="py-12 bg-slate-100/70 border-y border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-600">
           Skenējam praktiski jebkuru vieglo auto vai mikroautobusu (no 2000. līdz 2025. gadam)
         </h3>
-        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-slate-300">
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">BMW</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Audi</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Volkswagen (VW)</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Mercedes-Benz</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Volvo</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Toyota & Lexus</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Škoda</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Ford</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Opel</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Peugeot & Citroën</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Renault</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Hyundai & Kia</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Nissan & Honda</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Mazda</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Subaru</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Mitsubishi</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Dacia</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Seat</span>
-          <span class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800">Jeep / Dodge</span>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-slate-700">
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">BMW</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Audi</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Volkswagen (VW)</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Mercedes-Benz</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Volvo</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Toyota & Lexus</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Škoda</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Ford</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Opel</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Peugeot & Citroën</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Renault</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Hyundai & Kia</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Nissan & Honda</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Mazda</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Subaru</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Mitsubishi</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Dacia</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Seat</span>
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 shadow-sm">Jeep / Dodge</span>
         </div>
       </div>
     </section>
 
     <!-- SECTION: PROMO MARKETING BANNER (GIRLS, FLAGS, BALLOONS) -->
-    <section class="py-12 bg-gradient-to-b from-[#111a2e] via-[#0b1220] to-[#111a2e] border-b border-slate-700/60 overflow-hidden relative">
+    <section class="py-12 bg-gradient-to-b from-slate-100 via-white to-slate-100 border-b border-slate-200 overflow-hidden relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="rounded-3xl bg-slate-900/90 border border-amber-500/30 overflow-hidden shadow-2xl grid lg:grid-cols-12 gap-0 items-center">
+        <div class="rounded-3xl bg-white border border-amber-300/80 overflow-hidden shadow-xl grid lg:grid-cols-12 gap-0 items-center">
           
           <div class="lg:col-span-6 relative h-72 sm:h-96 w-full overflow-hidden bg-slate-950 group">
             <img 
@@ -855,7 +855,7 @@
               <span class="px-3 py-1 rounded-full bg-amber-500 text-black font-extrabold text-xs shadow-lg uppercase tracking-wider">
                 🔥 SEZONAS AKCIJA
               </span>
-              <span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-amber-300 font-bold text-xs border border-amber-500/30">
+              <span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-amber-600 font-bold text-xs border border-amber-500/30">
                 🏁 DUMBRĀJA IELA, IMANTA
               </span>
             </div>
@@ -866,24 +866,24 @@
               🎉 AKCIJAS PIEDĀVĀJUMS
             </div>
             
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
               Piebrauc un noskaidro patiesību par savu auto <span class="text-amber-400">15 minūtēs!</span>
             </h3>
 
-            <p class="text-slate-300 text-sm leading-relaxed">
+            <p class="text-slate-600 text-sm leading-relaxed">
               Nav jāmokās neziņā, kāpēc deg Check Engine un vai auto izturēs nākamo braucienu. Profesionāls skaneris, skaidrs izraksts latviski un <strong>īpašas atlaides policistiem, mediķiem un meitenēm sarkanos peldkostīmos!</strong>
             </p>
 
             <div class="grid grid-cols-2 gap-3 pt-1">
-              <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
+              <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
                 <div class="text-xs text-slate-400 font-medium">Standarta fiksētā cena</div>
                 <div class="text-amber-400 font-black text-2xl mt-0.5">50 €</div>
-                <div class="text-[11px] text-slate-400">Viss iekļauts (15 min)</div>
+                <div class="text-[11px] text-slate-500">Viss iekļauts (15 min)</div>
               </div>
-              <div class="p-3.5 rounded-xl bg-slate-950/70 border border-red-500/40">
+              <div class="p-3.5 rounded-xl bg-red-50 border border-red-200">
                 <div class="text-xs text-red-400 font-medium">Policijai, Mediķiem & 👙 Sarkanos peldkostīmos</div>
                 <div class="text-emerald-400 font-black text-2xl mt-0.5">40 €</div>
-                <div class="text-[11px] text-slate-400">Akcijas atlaide uz vietas</div>
+                <div class="text-[11px] text-slate-500">Akcijas atlaide uz vietas</div>
               </div>
             </div>
 
@@ -892,7 +892,7 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 Zvanīt: +371 26 366 650
               </a>
-              <a href="#pieteikums" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-750 text-white font-bold text-sm text-center border border-slate-700 transition-all flex items-center justify-center gap-2">
+              <a href="#pieteikums" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm text-center border border-slate-300 shadow-sm transition-all flex items-center justify-center gap-2">
                 <span>Stāties rindā online</span>
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
               </a>
@@ -908,32 +908,32 @@
     <section id="pieteikums" class="py-16 md:py-24 relative">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-[#0d1424] border border-slate-800 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div class="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 shadow-xl relative overflow-hidden">
           
           <div class="text-center space-y-3 mb-8">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider">
               ⚡ PIERAKSTS VAI ĀTRA PIEBRAUKŠANA
             </div>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900">
               Vēlies piebraukt? Paziņo mums!
             </h2>
-            <p class="text-slate-300 text-sm sm:text-base">
+            <p class="text-slate-600 text-sm sm:text-base">
               Aizpildi laukus, un ar 1 klikšķi nosūti WhatsApp ziņu vai zvani uzreiz.
             </p>
           </div>
 
           <!-- Live Queue Warning in Form -->
-          <div class="mb-6 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3.5">
+          <div class="mb-6 p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3.5">
             <div class="w-9 h-9 rounded-xl bg-amber-500 text-black flex items-center justify-center font-bold text-lg shrink-0">
               ⏳
             </div>
             <div class="text-xs sm:text-sm space-y-1">
-              <div class="font-extrabold text-white flex items-center gap-2">
+              <div class="font-extrabold text-slate-900 flex items-center gap-2">
                 <span>Šobrīd rindā gaida:</span>
                 <span class="queueLiveCount text-amber-400 font-mono text-base font-black">18</span>
                 <span>cilvēki / automašīnas</span>
               </div>
-              <p class="text-slate-300 leading-relaxed text-xs">
+              <p class="text-slate-600 leading-relaxed text-xs">
                 <strong>Stājies rindā laicīgi!</strong> Lai izvairītos no ilgas gaidīšanas pie Dumbrāja ielas boksa, nosūti savu pieteikumu vai zvani — mēs uzreiz rezervēsim tev konkrētu 15 minūšu piebraukšanas laiku.
               </p>
             </div>
@@ -943,20 +943,20 @@
             
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
-                <label for="carMake" class="block text-xs font-semibold text-slate-300 mb-1.5">Auto marka un modelis</label>
-                <input type="text" id="carMake" required placeholder="piem., BMW 530d vai VW Passat" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                <label for="carMake" class="block text-xs font-semibold text-slate-700 mb-1.5">Auto marka un modelis</label>
+                <input type="text" id="carMake" required placeholder="piem., BMW 530d vai VW Passat" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-colors text-sm">
               </div>
 
               <div>
-                <label for="carYear" class="block text-xs font-semibold text-slate-300 mb-1.5">Izlaiduma gads</label>
-                <input type="text" id="carYear" placeholder="piem., 2012" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                <label for="carYear" class="block text-xs font-semibold text-slate-700 mb-1.5">Izlaiduma gads</label>
+                <input type="text" id="carYear" placeholder="piem., 2012" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-colors text-sm">
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
-                <label for="carIssue" class="block text-xs font-semibold text-slate-300 mb-1.5">Galvenā problēma / Simptoms</label>
-                <select id="carIssue" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                <label for="carIssue" class="block text-xs font-semibold text-slate-700 mb-1.5">Galvenā problēma / Simptoms</label>
+                <select id="carIssue" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-amber-500 transition-colors text-sm">
                   <option value="Deg Check Engine lampiņa">Deg "Check Engine" dzeltenā lampiņa</option>
                   <option value="Zūd jauda / dzinējs avārijas režīmā">Zūd jauda / Dzinējs avārijas režīmā</option>
                   <option value="Deg ABS / ESP lampiņa">Deg ABS vai ESP pretizslīdes lampiņa</option>
@@ -970,14 +970,14 @@
               </div>
 
               <div>
-                <label for="preferredTime" class="block text-xs font-semibold text-slate-300 mb-1.5">Kad plāno piebraukt?</label>
-                <input type="text" id="preferredTime" placeholder="piem., Šodien pēc plkst. 17:00" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                <label for="preferredTime" class="block text-xs font-semibold text-slate-700 mb-1.5">Kad plāno piebraukt?</label>
+                <input type="text" id="preferredTime" placeholder="piem., Šodien pēc plkst. 17:00" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-colors text-sm">
               </div>
             </div>
 
             <div>
-              <label for="phoneNum" class="block text-xs font-semibold text-slate-300 mb-1.5">Tavs tālrunis (saziņai)</label>
-              <input type="tel" id="phoneNum" placeholder="+371 2X XXX XXX" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+              <label for="phoneNum" class="block text-xs font-semibold text-slate-700 mb-1.5">Tavs tālrunis (saziņai)</label>
+              <input type="tel" id="phoneNum" placeholder="+371 2X XXX XXX" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-amber-500 transition-colors text-sm">
             </div>
 
             <div class="pt-3 flex flex-col sm:flex-row gap-3">
@@ -988,7 +988,7 @@
                 Pieteikt caur WhatsApp (Gatava ziņa)
               </button>
               
-              <a href="tel:+37126366650" class="py-4 px-6 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm sm:text-base border border-slate-700 flex items-center justify-center gap-2">
+              <a href="tel:+37126366650" class="py-4 px-6 rounded-xl bg-white hover:bg-slate-50 text-slate-900 font-bold text-sm sm:text-base border border-slate-300 shadow-sm flex items-center justify-center gap-2">
                 <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 Zvanīt tūlīt
               </a>
@@ -1006,7 +1006,7 @@
     </section>
 
     <!-- SECTION: KLIENTU ATSAUKSMES (9342 ATSAUKSMES AR INFINITE SCROLL) -->
-    <section id="atsauksmes" class="py-16 md:py-24 bg-[#0b1220] border-t border-slate-700/60">
+    <section id="atsauksmes" class="py-16 md:py-24 bg-slate-100/70 border-t border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
@@ -1016,18 +1016,18 @@
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
             „Neticami ātri un profesionāli!”
           </h2>
-          <p class="text-slate-300 text-base sm:text-lg">
+          <p class="text-slate-600 text-base sm:text-lg">
             <span class="text-amber-400 font-semibold">„Ja varētu iedot 6 zvaigznes, dotu arī sešas!”</span> — Lūk, ko par mums saka autovadītāji Imantā:
           </p>
 
           <!-- Overall Rating Summary Pill -->
           <div class="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs">
-            <div class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-2">
+            <div class="px-4 py-2 rounded-xl bg-white border border-slate-200 flex items-center gap-2 shadow-sm">
               <span class="text-amber-400 font-bold text-base">★★★★★</span>
               <span class="font-bold text-white text-sm">5.0 no 5.0</span>
-              <span class="text-slate-400">(9342 pārbaudīti vērtējumi)</span>
+              <span class="text-slate-600">(9342 pārbaudīti vērtējumi)</span>
             </div>
-            <div class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 flex items-center gap-1.5">
+            <div class="px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 flex items-center gap-1.5 shadow-sm">
               <span>📍</span> Dumbrāja iela, Imanta
             </div>
           </div>
@@ -1046,7 +1046,7 @@
           </div>
           
           <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <button id="loadMoreReviewsBtn" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-850 active:bg-slate-800 text-slate-200 border border-slate-700 hover:border-amber-500/50 text-xs sm:text-sm font-bold transition-all shadow-lg flex items-center gap-2">
+            <button id="loadMoreReviewsBtn" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 active:bg-slate-100 text-slate-800 border border-slate-300 hover:border-amber-500 text-xs sm:text-sm font-bold transition-all shadow-lg flex items-center gap-2">
               <span>Ielādēt vēl atsauksmes</span>
               <span class="text-amber-400 font-mono font-black">(<span id="reviewsCountBadge">5</span> / 9342)</span>
             </button>
@@ -1061,7 +1061,7 @@
     </section>
 
     <!-- SECTION: BIEŽĀK UZDOTIE JAUTĀJUMI (FAQ) -->
-    <section id="faq" class="py-16 md:py-24 bg-[#0b101c] border-t border-slate-800/80">
+    <section id="faq" class="py-16 md:py-24 bg-slate-100/70 border-t border-slate-200">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center space-y-3 mb-12">
@@ -1075,12 +1075,12 @@
 
         <div class="space-y-4" id="faqAccordion">
           
-          <div class="faq-item rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden">
-            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-400 transition-colors">
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-600 transition-colors">
               <span>Kādas atlaides ir policistiem un medicīnas personālam?</span>
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               Valsts un Pašvaldības policistiem, kā arī visam medicīnas personālam (NMPD brigādēm, ārstiem, medmāsām) ar prieku nodrošinām 20% atlaidi — pilna auto diagnostika maksā tikai <strong>40 EUR</strong> (50 EUR vietā). Paldies par jūsu svarīgo darbu sabiedrības labā! Vienkārši uzrādiet dienesta vai darba apliecību pirms skenēšanas.
             </div>
           </div>
@@ -1096,52 +1096,52 @@
 
         <div class="space-y-4" id="faqAccordion">
           
-          <div class="faq-item rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden">
-            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-400 transition-colors">
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-600 transition-colors">
               <span>Vai man obligāti jāpiesakās vairākas dienas iepriekš?</span>
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               Nē! Mūsu pakalpojums ir veidots, lai taupītu tavu laiku. Bieži pietiek ar 15-30 minūšu iepriekšēju zvanu vai ziņu WhatsApp: "Sveiki, esmu netālu, varu piebraukt?". Ja laiks ir brīvs, pieņemam uzreiz.
             </div>
           </div>
 
-          <div class="faq-item rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden">
-            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-400 transition-colors">
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-600 transition-colors">
               <span>Vai jūs nodzēsīsiet Check Engine lampiņu?</span>
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               Jā, ja vien kļūda nav saistīta ar kritisku, pastāvīgi aktīvu drošības vai sensora bojājumu, ko vadības bloks momentāni fiksē no jauna. Mēs vienmēr nolasām kļūdu, saglabājam atskaiti un pēc tam nodzēšam visas pieejamās kļūdas.
             </div>
           </div>
 
-          <div class="faq-item rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden">
-            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-400 transition-colors">
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-600 transition-colors">
               <span>Vai 50 € cenā tiešām ir iekļauti visi bloki, nevis tikai dzinējs?</span>
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               Jā, precīzi! Mēs nepārdodam 20 eiro lētu "dzinēja nolasīšanu ar lētu telefonu", pēc kuras tev tāpat jābrauc citur. Mēs veicam pilnu visas automašīnas skenēšanu (dzinējs, kārba, ABS, SRS, borta elektronika, kondicionieris utt.) un iedodam pilnu atskaiti par fiksētu 50 EUR samaksu.
             </div>
           </div>
 
-          <div class="faq-item rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden">
-            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-400 transition-colors">
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-600 transition-colors">
               <span>Vai jūs varat pārbaudīt auto pirms pirkšanas?</span>
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               Jā, šis ir viens no populārākajiem pakalpojumiem! Pircēji un pārdevēji bieži piebrauc pirms darījuma. Mēs pārbaudām, vai kļūdas nav nesen nodzēstas (Readiness monitori), pārbaudām reālos dzinēja un transmisijas parametrus un vadības bloku statusu.
             </div>
           </div>
 
-          <div class="faq-item rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden">
-            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-400 transition-colors">
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-sm">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between font-bold text-white text-base hover:text-amber-600 transition-colors">
               <span>Kur tieši Imantā jūs atrodaties?</span>
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
-            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
+            <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
               Atrodamies Imantā, ērti piebraucamā vietā <strong>Dumbrāja ielā</strong>. Plašs pagalms, viegla novietošana bez stresa un šaurības. Pirms izbraukšanas uzspied Waze pogu mūsu lapā, un navigācija atvedīs pie durvīm!
             </div>
           </div>
@@ -1158,14 +1158,14 @@
         <div class="grid lg:grid-cols-12 gap-10 items-stretch">
           
           <!-- Contact Details -->
-          <div class="lg:col-span-5 rounded-3xl bg-slate-900 border border-slate-800 p-8 flex flex-col justify-between space-y-6">
+          <div class="lg:col-span-5 rounded-3xl bg-white border border-slate-200 p-8 flex flex-col justify-between space-y-6 shadow-xl">
             <div class="space-y-6">
               <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider mb-3">
                   📍 LOKĀCIJA & KONTAKTI
                 </div>
                 <h2 class="text-3xl font-extrabold text-white">Piebrauc šodien!</h2>
-                <p class="text-slate-400 text-sm mt-1">Dumbrāja iela, Imanta, Rīga • Viegli atrast</p>
+                <p class="text-slate-500 text-sm mt-1">Dumbrāja iela, Imanta, Rīga • Viegli atrast</p>
               </div>
 
               <!-- Contact items -->
@@ -1177,8 +1177,8 @@
                   </div>
                   <div>
                     <div class="text-xs text-slate-400 font-semibold uppercase">Adrese</div>
-                    <div class="text-white font-bold text-base">Dumbrāja iela, Imanta, Rīga</div>
-                    <div class="text-xs text-slate-400">Ērta piebraukšana un bezmaksas stāvvieta</div>
+                    <div class="text-slate-900 font-bold text-base">Dumbrāja iela, Imanta, Rīga</div>
+                    <div class="text-xs text-slate-600">Ērta piebraukšana un bezmaksas stāvvieta</div>
                   </div>
                 </div>
 
@@ -1189,7 +1189,7 @@
                   <div>
                     <div class="text-xs text-slate-400 font-semibold uppercase">Telefons / WhatsApp</div>
                     <a href="tel:+37126366650" class="text-amber-400 font-black text-xl hover:underline">+371 26 366 650</a>
-                    <div class="text-xs text-slate-400">Zvani vai raksti — ieņem vietu rindā laicīgi</div>
+                    <div class="text-xs text-slate-600">Zvani vai raksti — ieņem vietu rindā laicīgi</div>
                   </div>
                 </div>
 
@@ -1199,8 +1199,8 @@
                   </div>
                   <div>
                     <div class="text-xs text-slate-400 font-semibold uppercase">Darba laiks</div>
-                    <div class="text-white font-medium">Pirmdiena - Piektdiena: <strong class="text-amber-400">08:30 - 20:00</strong></div>
-                    <div class="text-white font-medium">Sestdiena: <strong class="text-amber-400">09:00 - 17:00</strong></div>
+                    <div class="text-slate-800 font-medium">Pirmdiena - Piektdiena: <strong class="text-amber-400">08:30 - 20:00</strong></div>
+                    <div class="text-slate-800 font-medium">Sestdiena: <strong class="text-amber-400">09:00 - 17:00</strong></div>
                     <div class="text-slate-400 text-xs">Svētdiena: pēc iepriekšējas vienošanās</div>
                   </div>
                 </div>
@@ -1209,14 +1209,14 @@
             </div>
 
             <!-- Fast Navigation Buttons -->
-            <div class="pt-4 border-t border-slate-800 space-y-2">
+            <div class="pt-4 border-t border-slate-200 space-y-2">
               <a href="https://waze.com/ul?q=Dumbraja%20iela%20Imanta%20Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 font-bold text-sm border border-cyan-500/40 flex items-center justify-center gap-2 transition-all">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
                 </svg>
                 Atvērt ar Waze (Dumbrāja iela)
               </a>
-              <a href="https://maps.google.com/?q=Dumbraja+iela+Imanta+Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-750 text-white font-semibold text-sm border border-slate-700 flex items-center justify-center gap-2 transition-all">
+              <a href="https://maps.google.com/?q=Dumbraja+iela+Imanta+Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 shadow-sm flex items-center justify-center gap-2 transition-all">
                 <span>Google Maps maršruts</span>
               </a>
             </div>
@@ -1224,9 +1224,9 @@
           </div>
 
           <!-- Real Location Street Photo Preview -->
-          <div class="lg:col-span-7 rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden relative min-h-[380px] flex flex-col shadow-2xl group">
-            <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-              <span class="text-xs font-mono text-slate-400 flex items-center gap-2">
+          <div class="lg:col-span-7 rounded-3xl bg-white border border-slate-200 overflow-hidden shadow-sm relative min-h-[380px] flex flex-col shadow-2xl group">
+            <div class="p-4 bg-slate-100 border-b border-slate-200 flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-700 flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 DUMBRĀJA IELA, IMANTA • REĀLĀ PIEBRAUKŠANAS VIETA
               </span>
@@ -1244,14 +1244,14 @@
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent"></div>
               
               <!-- Location Pointer Overlay -->
-              <div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-xl">
+              <div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 text-slate-900 shadow-xl">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 rounded-xl bg-amber-500 text-black flex items-center justify-center font-black shrink-0 text-base shadow-lg shadow-amber-500/20">
                     📍
                   </div>
                   <div>
-                    <h4 class="text-sm font-extrabold text-white">Piebraukšana Dumbrāja ielā</h4>
-                    <p class="text-xs text-slate-300">Diagnostika notiek tieši šeit uz ielas pie mājas • Ērta piebraukšana un stāvvieta</p>
+                    <h4 class="text-sm font-extrabold text-slate-900">Piebraukšana Dumbrāja ielā</h4>
+                    <p class="text-xs text-slate-600">Diagnostika notiek tieši šeit uz ielas pie mājas • Ērta piebraukšana un stāvvieta</p>
                   </div>
                 </div>
 
@@ -1266,7 +1266,7 @@
               </div>
             </div>
 
-            <div class="p-3 bg-slate-950 border-t border-slate-800 text-center text-[11px] text-slate-400">
+            <div class="p-3 bg-slate-100 border-t border-slate-200 text-center text-[11px] text-slate-500">
               💡 Padoms: Šobrīd rindā gaida <span class="queueLiveCount text-amber-400 font-bold">18</span> auto. Piebrauc pie šīs mājas uz Dumbrāja ielas!
             </div>
           </div>
@@ -1294,13 +1294,13 @@
   </footer>
 
   <!-- MOBILE FIXED STICKY ACTION BAR (Piespraustā josla mobilajā tālrunī) -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-2.5 flex flex-col gap-1.5 shadow-2xl">
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex flex-col gap-1.5 shadow-2xl">
     <div class="flex items-center justify-between text-[11px] px-2">
       <span class="flex items-center gap-1.5 text-amber-400 font-semibold">
         <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-        Rindā: <strong class="queueLiveCount text-white font-mono">18</strong> auto
+        Rindā: <strong class="queueLiveCount text-slate-900 font-mono">18</strong> auto
       </span>
-      <span class="text-amber-300 font-bold">⚠️ Stājies rindā laicīgi!</span>
+      <span class="text-amber-600 font-bold">⚠️ Stājies rindā laicīgi!</span>
     </div>
 
     <div class="flex items-center gap-2">

@@ -94,18 +94,18 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="space-y-6 animate-fadeIn">
         
         <!-- Header banner -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl bg-slate-950 border border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200">
           <div>
             <div class="flex items-center gap-3">
               <span class="px-3 py-1 rounded-lg font-mono font-black text-sm border ${item.badgeColor}">
                 ${item.code}
               </span>
-              <span class="text-xs text-slate-400 font-mono">${item.system}</span>
+              <span class="text-xs text-slate-500 font-mono">${item.system}</span>
             </div>
             <h4 class="text-lg font-extrabold text-slate-900 mt-1.5">${item.title}</h4>
           </div>
           <div class="text-left sm:text-right shrink-0">
-            <div class="text-[11px] text-slate-400 uppercase font-semibold">Bīstamības pakāpe</div>
+            <div class="text-[11px] text-slate-500 uppercase font-semibold">Bīstamības pakāpe</div>
             <div class="text-xs font-bold ${item.urgencyColor}">${item.urgency}</div>
           </div>
         </div>
@@ -113,22 +113,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- 3-box breakdown -->
         <div class="grid md:grid-cols-3 gap-4">
           
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1.5">
-            <div class="text-xs font-bold text-amber-400 uppercase tracking-wide flex items-center gap-1.5">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <div class="text-xs font-bold text-amber-600 uppercase tracking-wide flex items-center gap-1.5">
               <span>⚠️</span> Simptomi dzīvē
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">${item.symptom}</p>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1.5">
-            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-1.5">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <div class="text-xs font-bold text-cyan-600 uppercase tracking-wide flex items-center gap-1.5">
               <span>💬</span> Vienkāršā valodā
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">${item.plainMeaning}</p>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1.5">
-            <div class="text-xs font-bold text-emerald-400 uppercase tracking-wide flex items-center gap-1.5">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <div class="text-xs font-bold text-emerald-600 uppercase tracking-wide flex items-center gap-1.5">
               <span>🔍</span> Biežākais cēlonis
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">${item.commonCause}</p>
@@ -137,20 +137,20 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <!-- Recommendation / Meistara padoms -->
-        <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/15 via-orange-500/10 to-transparent border border-amber-500/30 flex items-start gap-3">
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3">
           <div class="w-8 h-8 rounded-lg bg-amber-500 text-black flex items-center justify-center font-black shrink-0 text-sm mt-0.5">
             💡
           </div>
           <div class="text-xs space-y-1">
-            <div class="font-bold text-amber-300 uppercase tracking-wide">Meistara ieteikums tavam makam:</div>
+            <div class="font-bold text-amber-800 uppercase tracking-wide">Meistara ieteikums tavam makam:</div>
             <p class="text-slate-200 leading-relaxed">${item.advice}</p>
           </div>
         </div>
 
         <!-- Call to action inside sample -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-400">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-600">
           <span>Šādu skaidru izrakstu tu saņemsi par <strong>katru</strong> sava auto kļūdu!</span>
-          <a href="tel:+37126366650" class="text-amber-400 font-bold hover:underline flex items-center gap-1">
+          <a href="tel:+37126366650" class="text-amber-600 font-bold hover:underline flex items-center gap-1">
             Zvanīt meistaram tagad (50 €) →
           </a>
         </div>
@@ -164,11 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => {
         t.classList.remove('active', 'bg-amber-500', 'text-black', 'border-amber-500');
-        t.classList.add('bg-slate-800', 'text-slate-600', 'border-slate-700');
+        t.classList.add('bg-slate-100', 'text-slate-700', 'border-slate-300');
       });
 
       tab.classList.add('active', 'bg-amber-500', 'text-black', 'border-amber-500');
-      tab.classList.remove('bg-slate-800', 'text-slate-600', 'border-slate-700');
+      tab.classList.remove('bg-slate-100', 'text-slate-700', 'border-slate-300');
 
       const codeKey = tab.getAttribute('data-code');
       renderErrorDetail(codeKey);
