@@ -65,3 +65,4 @@ Gatavie faili tiks ievietoti mapē `dist/`, ko var augšupielādēt uz jebkura h
 - Telefona numurs: meklē `+371 20 000 000` failā `index.html` un `main.js`.
 - WhatsApp saite: `https://wa.me/37120000000`.
 - Adrese: `Kurzemes prospekts 3G, Imanta, Rīga`.
+

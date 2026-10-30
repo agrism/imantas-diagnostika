@@ -241,99 +241,85 @@
 
           </div>
 
-          <!-- Hero Right Column: Live Diagnostic Terminal Preview -->
+          <!-- Hero Right Column: Photo of Technician with Laptop & OBD2 + Live Scanner Data -->
           <div class="lg:col-span-5">
-            <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="relative mx-auto max-w-md lg:max-w-none space-y-4">
               
               <!-- Subtle decorative halo -->
               <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 to-orange-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000"></div>
               
-              <!-- Diagnostic Card -->
-              <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-5 shadow-2xl space-y-4">
-                
-                <!-- Terminal Header -->
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                  <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                    <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                    <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                    <span class="ml-2 font-mono text-xs text-slate-400">OBD-II LIVE SCANNER</span>
-                  </div>
-                  <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-950 text-emerald-400 border border-emerald-800/60 font-semibold">
-                    CONNECTED
-                  </span>
-                </div>
+              <!-- Main Photo Card: Technician with Laptop & OBD2 cable -->
+              <div class="relative rounded-2xl bg-slate-900 border border-slate-700/80 overflow-hidden shadow-2xl group">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-950">
+                  <img 
+                    src="./images/mechanic-laptop-obd2.jpg" 
+                    alt="Auto diagnostikas meistars ar portatīvo datoru un OBD2 kabeli pieslēdzies mašīnai Imantā" 
+                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    loading="eager"
+                  />
+                  <!-- Dark gradient overlay for text readability -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
 
-                <!-- Live Car Detection -->
-                <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 font-mono text-xs space-y-1.5">
-                  <div class="flex justify-between text-slate-400">
-                    <span>PROTOKOLS:</span>
-                    <span class="text-white font-semibold">ISO 15765-4 (CAN 500k)</span>
-                  </div>
-                  <div class="flex justify-between text-slate-400">
-                    <span>STATUSS:</span>
-                    <span class="text-amber-400 font-semibold animate-pulse">● Skenēšana pabeigta (15 min)</span>
-                  </div>
-                  <div class="flex justify-between text-slate-400">
-                    <span>CENA:</span>
-                    <span class="text-emerald-400 font-bold">50.00 EUR (Fiksēta)</span>
-                  </div>
-                </div>
-
-                <!-- Detected Fault Codes List -->
-                <div class="space-y-2.5">
-                  <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center justify-between">
-                    <span>Konstatētās kļūdas (Piemērs)</span>
-                    <span class="text-amber-400 font-mono">2 Kļūdas</span>
+                  <!-- Floating Top Badge -->
+                  <div class="absolute top-3 left-3 flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700 text-xs font-semibold text-white shadow-lg">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>OBD-II Pieslēgums tiešraidē</span>
                   </div>
 
-                  <!-- Error 1 -->
-                  <div class="p-3 rounded-xl bg-slate-800/60 border border-red-500/30 flex items-start gap-3">
-                    <div class="px-2 py-1 rounded bg-red-950 text-red-400 font-mono font-bold text-xs border border-red-800/50 mt-0.5">
-                      P0420
+                  <!-- Floating Bottom Price Tag -->
+                  <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 text-xs">
+                    <div class="flex items-center gap-2">
+                      <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">
+                        ⚡
+                      </div>
+                      <div>
+                        <div class="font-bold text-white">Diagnostika uz vietas</div>
+                        <div class="text-[11px] text-slate-400">15 minūtes • Imanta</div>
+                      </div>
                     </div>
-                    <div class="text-xs space-y-0.5 flex-1">
-                      <div class="font-bold text-white">Katalizatora efektivitāte zem normas</div>
-                      <div class="text-slate-400">Dzinēja vadības bloks (ECU) • Lambda 2 signāls</div>
-                      <div class="text-[11px] text-emerald-400 font-medium">✓ Meistara slēdziens: Lamda zondes defekts, katalizators vesels</div>
-                    </div>
-                  </div>
-
-                  <!-- Error 2 -->
-                  <div class="p-3 rounded-xl bg-slate-800/60 border border-amber-500/30 flex items-start gap-3">
-                    <div class="px-2 py-1 rounded bg-amber-950 text-amber-400 font-mono font-bold text-xs border border-amber-800/50 mt-0.5">
-                      P0302
-                    </div>
-                    <div class="text-xs space-y-0.5 flex-1">
-                      <div class="font-bold text-white">Aizdedzes izlaidums 2. cilindrā</div>
-                      <div class="text-slate-400">Dzinēja vadības bloks (ECU) • Misfire detected</div>
-                      <div class="text-[11px] text-emerald-400 font-medium">✓ Meistara slēdziens: 2. cilindra aizdedzes spoles maiņa</div>
+                    <div class="text-right">
+                      <div class="font-black text-amber-400 text-sm">50 EUR</div>
+                      <div class="text-[10px] text-slate-400">fiksēta cena</div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Output Summary Banner -->
-                <div class="p-3 rounded-xl bg-gradient-to-r from-slate-950 to-slate-900 border border-slate-800 flex items-center justify-between text-xs">
-                  <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    </svg>
-                    <span class="text-slate-300 font-medium">Atskaite gatava nosūtīšanai</span>
+                <!-- Live Scanner Terminal Below Photo -->
+                <div class="p-4 bg-slate-900 space-y-3 border-t border-slate-800">
+                  
+                  <div class="flex items-center justify-between font-mono text-[11px] text-slate-400 pb-2 border-b border-slate-800">
+                    <span class="flex items-center gap-1.5 text-white font-semibold">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      OBD-II LIVE TELEMETRY
+                    </span>
+                    <span class="text-amber-400 font-bold">15 MIN SKENĒŠANA</span>
                   </div>
-                  <span class="font-bold text-amber-400 flex items-center gap-1">
-                    WhatsApp / PDF
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                  </span>
-                </div>
 
-                <!-- Real-time quote badge -->
-                <div class="text-center pt-1">
-                  <span class="text-[11px] text-slate-400 font-medium">
-                    📍 Imanta • P.-Pk. 08:30-20:00 • Sestd. 09:00-17:00
-                  </span>
+                  <!-- Sample detected code pill -->
+                  <div class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-2.5">
+                      <span class="px-2 py-0.5 rounded font-mono font-bold bg-amber-950 text-amber-400 border border-amber-800/60 text-[11px]">
+                        P0420
+                      </span>
+                      <span class="text-slate-300 font-medium truncate max-w-[200px] sm:max-w-xs">
+                        Katalizatora efektivitāte (Lambda 2)
+                      </span>
+                    </div>
+                    <span class="text-emerald-400 font-bold text-[11px] shrink-0">✓ Atšifrēts</span>
+                  </div>
+
+                  <!-- Quick WhatsApp/Call action row -->
+                  <div class="flex items-center justify-between text-xs pt-1">
+                    <span class="text-slate-400 text-[11px]">Skaidrs apraksts un atskaite telefonā</span>
+                    <a href="tel:+37120000000" class="text-amber-400 font-bold hover:underline flex items-center gap-1 text-[11px]">
+                      Piebraukt tagad →
+                    </a>
+                  </div>
+
                 </div>
 
               </div>
+
             </div>
           </div>
 
@@ -552,6 +538,36 @@
                 </p>
               </div>
 
+            </div>
+
+            <!-- Visual Feature Banner: OBD2 Connection & Diagnostic Laptop -->
+            <div class="mt-6 rounded-2xl bg-slate-900/90 border border-slate-800 overflow-hidden shadow-xl grid md:grid-cols-12 gap-0 items-center">
+              <div class="md:col-span-5 h-48 md:h-full min-h-[180px] relative overflow-hidden bg-slate-950">
+                <img 
+                  src="./images/obd2-connection-laptop.jpg" 
+                  alt="OBD2 kabeļa pieslēgšana automašīnai un kļūdu skenēšana ar portatīvo datoru" 
+                  class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/70 backdrop-blur-sm text-[10px] font-mono text-amber-300 border border-amber-500/30">
+                  OBD2 KABELIS & DZIĻĀ SKENĒŠANA
+                </span>
+              </div>
+              <div class="md:col-span-7 p-5 space-y-2">
+                <div class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-400">
+                  <span>⚡</span> PROFESIONĀLA APARATŪRA
+                </div>
+                <h4 class="text-sm sm:text-base font-extrabold text-white">Tiešais pieslēgums borta datoram</h4>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Pieslēdzamies ar specializētu OBD2 kabeli un portatīvo datoru tieši pie tavas automašīnas vadības blokiem. Nolasām reālos parametrus bez minēšanas.
+                </p>
+                <div class="pt-1 text-[11px] text-emerald-400 font-semibold flex items-center gap-2">
+                  <span>✓ 100% drošs pieslēgums</span>
+                  <span>•</span>
+                  <span>✓ 15 minūšu laikā Imantā</span>
+                </div>
+              </div>
             </div>
           </div>
 
