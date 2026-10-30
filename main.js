@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const preferredTime = document.getElementById('preferredTime').value.trim() || 'Šodien';
       const phoneNum = document.getElementById('phoneNum').value.trim() || '';
 
-      const message = `Sveiki! Vēlos pieteikt auto diagnostiku Imantā (50 EUR / 15 min):
+      const message = `Sveiki! Vēlos stāties rindā uz auto diagnostiku Dumbrāja ielā, Imantā (50 EUR / 15 min):
 🚗 Auto: ${carMake} (${carYear})
 ⚠️ Problēma: ${carIssue}
 ⏰ Vēlamais laiks: ${preferredTime}
@@ -230,5 +230,117 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-});
 
+  // 5. Live Queue System with Persistent LocalStorage Cache & Smooth Progression (10 - 30 people)
+  // Changes gently by +1, -1, or 0 every 5 minutes; never suddenly jumps from 10 to 0 on refresh!
+  const QUEUE_STORAGE_KEY = 'imantas_diagnostika_queue_v1';
+  const MIN_QUEUE = 10;
+  const MAX_QUEUE = 30;
+  const STEP_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+
+  function calculateNextQueueStep(current) {
+    let delta = 0;
+    const rand = Math.random();
+
+    if (current <= 12) {
+      // Near lower boundary: bias towards adding clients
+      delta = rand < 0.75 ? 1 : (rand < 0.90 ? 0 : -1);
+    } else if (current >= 28) {
+      // Near upper boundary: bias towards finishing clients
+      delta = rand < 0.75 ? -1 : (rand < 0.90 ? 0 : 1);
+    } else {
+      // Balanced traffic: ~42% serviced, ~42% joined, ~16% stayed identical
+      if (rand < 0.42) delta = -1;
+      else if (rand < 0.84) delta = 1;
+      else delta = 0;
+    }
+
+    const next = current + delta;
+    return Math.max(MIN_QUEUE, Math.min(MAX_QUEUE, next));
+  }
+
+  function initQueueCounter() {
+    const queueElements = document.querySelectorAll('.queueLiveCount');
+    if (!queueElements.length) return;
+
+    const now = Date.now();
+    let state = null;
+
+    try {
+      const cached = localStorage.getItem(QUEUE_STORAGE_KEY);
+      if (cached) {
+        state = JSON.parse(cached);
+      }
+    } catch (e) {
+      console.warn('Queue cache error:', e);
+    }
+
+    // Default starting point if cache empty or invalid
+    if (!state || typeof state.count !== 'number' || isNaN(state.count)) {
+      state = {
+        count: 18,
+        lastUpdated: now
+      };
+    } else {
+      // Keep strictly within boundaries [10, 30]
+      state.count = Math.max(MIN_QUEUE, Math.min(MAX_QUEUE, Math.round(state.count)));
+
+      // How many 5-minute intervals passed since user's last session?
+      const elapsed = now - (state.lastUpdated || now);
+      const steps = Math.floor(elapsed / STEP_INTERVAL_MS);
+
+      if (steps > 0) {
+        // Step forward smoothly (cap simulation to max 8 steps to prevent large jumps)
+        const simSteps = Math.min(steps, 8);
+        for (let i = 0; i < simSteps; i++) {
+          state.count = calculateNextQueueStep(state.count);
+        }
+        state.lastUpdated = now - (elapsed % STEP_INTERVAL_MS);
+      }
+    }
+
+    // Save initial state
+    try {
+      localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(state));
+    } catch (e) {}
+
+    // Update all matching elements in DOM
+    function renderQueueNumber(animate = false) {
+      queueElements.forEach(el => {
+        el.textContent = state.count;
+        if (animate) {
+          el.style.transform = 'scale(1.25)';
+          el.style.color = '#fbbf24';
+          el.style.transition = 'all 0.3s ease';
+          setTimeout(() => {
+            el.style.transform = '';
+            el.style.color = '';
+          }, 600);
+        }
+      });
+    }
+
+    renderQueueNumber(false);
+
+    // Schedule next update according to remainder of the 5-minute cycle
+    function scheduleNextCycle() {
+      const elapsedSinceUpdate = Date.now() - state.lastUpdated;
+      const delay = Math.max(1000, STEP_INTERVAL_MS - elapsedSinceUpdate);
+
+      setTimeout(() => {
+        state.count = calculateNextQueueStep(state.count);
+        state.lastUpdated = Date.now();
+        try {
+          localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {}
+        renderQueueNumber(true);
+        scheduleNextCycle();
+      }, delay);
+    }
+
+    scheduleNextCycle();
+  }
+
+  // Initialize queue counter
+  initQueueCounter();
+});

@@ -67,10 +67,15 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-2 mx-auto md:mx-0">
         <span class="inline-block w-2.5 h-2.5 rounded-full bg-black animate-ping"></span>
-        <span>⚡ Ātrā auto diagnostika Imantā: <strong>50 €</strong> | Gatavs <strong>15 minūtēs</strong> | Piebrauc bez ilgas gaidīšanas</span>
+        <span>⚡ Ātrā auto diagnostika Imantā (<strong>Dumbrāja iela</strong>) • <strong>50 €</strong> / <strong>15 min</strong></span>
+        <span class="hidden sm:inline">•</span>
+        <span class="inline-flex items-center gap-1.5 bg-black/20 px-2.5 py-0.5 rounded-full text-black font-extrabold text-xs">
+          <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+          Šobrīd rindā gaida: <span class="queueLiveCount font-mono text-sm underline decoration-black">18</span> auto • Stājies rindā laicīgi!
+        </span>
       </div>
       <div class="hidden md:flex items-center gap-4 text-xs font-bold uppercase tracking-wider">
-        <span>📍 Kurzemes prospekts, Imanta</span>
+        <span>📍 Dumbrāja iela, Imanta</span>
         <span>📞 <a href="tel:+37120000000" class="hover:underline">+371 20 000 000</a></span>
       </div>
     </div>
@@ -163,15 +168,50 @@
           <!-- Hero Left Column: Main Message -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <!-- Live Availability Badge -->
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 shadow-inner">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-              </span>
-              <span class="text-xs md:text-sm font-semibold text-slate-300">
-                Pieejams šodien Imantā • Bez iepriekšēja pieraksta nedēļām uz priekšu
-              </span>
+            <!-- Live Availability & Urgency Queue Box -->
+            <div class="space-y-3">
+              <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 shadow-inner">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span class="text-xs md:text-sm font-semibold text-slate-300">
+                  Pieejams šodien Imantā, Dumbrāja ielā
+                </span>
+              </div>
+
+              <!-- High Demand Queue Banner -->
+              <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-red-950/60 via-slate-900 to-amber-950/40 border border-red-500/40 text-left shadow-xl space-y-2">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                    </span>
+                    <span class="text-xs font-black uppercase tracking-wider text-red-400">
+                      Liela noslodze • Stājies rindā laicīgi!
+                    </span>
+                  </div>
+                  <span class="text-[10px] font-mono text-slate-400 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-800">
+                    Live rinda
+                  </span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
+                  <div class="text-sm font-bold text-white flex items-center gap-2">
+                    <span>Šobrīd rindā gaida:</span>
+                    <span class="queueLiveCount text-2xl font-black text-amber-400 font-mono px-2 py-0.5 rounded-lg bg-amber-500/10 border border-amber-500/30">18</span>
+                    <span class="text-xs text-slate-300 font-medium">cilvēki / auto</span>
+                  </div>
+                  <div class="text-xs text-amber-300 font-bold bg-amber-500/15 px-3 py-1 rounded-xl border border-amber-500/30 inline-flex items-center gap-1.5 self-start sm:self-auto">
+                    <span>⏱️</span> ~15 min uz auto
+                  </div>
+                </div>
+
+                <p class="text-[11px] text-slate-400 leading-normal">
+                  Rindā vietas mainās ik pēc 5 minūtēm. Lai lieki nestāvētu uz ielas, <strong>piesaki savu vietu laicīgi</strong> pirms izbraukšanas!
+                </p>
+              </div>
             </div>
 
             <!-- Main Heading -->
@@ -748,6 +788,23 @@
             </p>
           </div>
 
+          <!-- Live Queue Warning in Form -->
+          <div class="mb-6 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3.5">
+            <div class="w-9 h-9 rounded-xl bg-amber-500 text-black flex items-center justify-center font-bold text-lg shrink-0">
+              ⏳
+            </div>
+            <div class="text-xs sm:text-sm space-y-1">
+              <div class="font-extrabold text-white flex items-center gap-2">
+                <span>Šobrīd rindā gaida:</span>
+                <span class="queueLiveCount text-amber-400 font-mono text-base font-black">18</span>
+                <span>cilvēki / automašīnas</span>
+              </div>
+              <p class="text-slate-300 leading-relaxed text-xs">
+                <strong>Stājies rindā laicīgi!</strong> Lai izvairītos no ilgas gaidīšanas pie Dumbrāja ielas boksa, nosūti savu pieteikumu vai zvani — mēs uzreiz rezervēsim tev konkrētu 15 minūšu piebraukšanas laiku.
+              </p>
+            </div>
+          </div>
+
           <form id="bookingForm" class="space-y-4">
             
             <div class="grid sm:grid-cols-2 gap-4">
@@ -935,7 +992,7 @@
               <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer hidden px-5 pb-5 text-sm text-slate-300 leading-relaxed border-t border-slate-800/50 pt-3">
-              Atrodamies Imantā, ērti piebraucamā vietā Kurzemes prospektā (blakus Anniņmuižas bulvārim). Plašs pagalms, viegla novietošana bez stresa un šaurības. Pirms izbraukšanas uzspied Waze pogu mūsu lapā, un navigācija atvedīs pie durvīm!
+              Atrodamies Imantā, ērti piebraucamā vietā <strong>Dumbrāja ielā</strong>. Plašs pagalms, viegla novietošana bez stresa un šaurības. Pirms izbraukšanas uzspied Waze pogu mūsu lapā, un navigācija atvedīs pie durvīm!
             </div>
           </div>
 
@@ -958,7 +1015,7 @@
                   📍 LOKĀCIJA & KONTAKTI
                 </div>
                 <h2 class="text-3xl font-extrabold text-white">Piebrauc šodien!</h2>
-                <p class="text-slate-400 text-sm mt-1">Imanta, Rīga • Viegli atrast un ērti piebraukt</p>
+                <p class="text-slate-400 text-sm mt-1">Dumbrāja iela, Imanta, Rīga • Viegli atrast</p>
               </div>
 
               <!-- Contact items -->
@@ -970,7 +1027,7 @@
                   </div>
                   <div>
                     <div class="text-xs text-slate-400 font-semibold uppercase">Adrese</div>
-                    <div class="text-white font-bold text-base">Kurzemes prospekts 3G, Imanta, Rīga</div>
+                    <div class="text-white font-bold text-base">Dumbrāja iela, Imanta, Rīga</div>
                     <div class="text-xs text-slate-400">Ērta piebraukšana un bezmaksas stāvvieta</div>
                   </div>
                 </div>
@@ -982,7 +1039,7 @@
                   <div>
                     <div class="text-xs text-slate-400 font-semibold uppercase">Telefons / WhatsApp</div>
                     <a href="tel:+37120000000" class="text-amber-400 font-black text-xl hover:underline">+371 20 000 000</a>
-                    <div class="text-xs text-slate-400">Zvani vai raksti jebkurā laikā</div>
+                    <div class="text-xs text-slate-400">Zvani vai raksti — ieņem vietu rindā laicīgi</div>
                   </div>
                 </div>
 
@@ -1003,13 +1060,13 @@
 
             <!-- Fast Navigation Buttons -->
             <div class="pt-4 border-t border-slate-800 space-y-2">
-              <a href="https://waze.com/ul?q=Kurzemes%20prospekts%20Imanta%20Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 font-bold text-sm border border-cyan-500/40 flex items-center justify-center gap-2 transition-all">
+              <a href="https://waze.com/ul?q=Dumbraja%20iela%20Imanta%20Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 font-bold text-sm border border-cyan-500/40 flex items-center justify-center gap-2 transition-all">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
                 </svg>
-                Atvērt ar Waze navigāciju
+                Atvērt ar Waze (Dumbrāja iela)
               </a>
-              <a href="https://maps.google.com/?q=Kurzemes+prospekts+Imanta+Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-750 text-white font-semibold text-sm border border-slate-700 flex items-center justify-center gap-2 transition-all">
+              <a href="https://maps.google.com/?q=Dumbraja+iela+Imanta+Riga" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-750 text-white font-semibold text-sm border border-slate-700 flex items-center justify-center gap-2 transition-all">
                 <span>Google Maps maršruts</span>
               </a>
             </div>
@@ -1021,7 +1078,7 @@
             <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
               <span class="text-xs font-mono text-slate-400 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                IMANTA, RĪGA • ĒRTA PIEBRAUKŠANA
+                DUMBRĀJA IELA, IMANTA • ĒRTA PIEBRAUKŠANA
               </span>
               <span class="text-xs font-bold text-amber-400">15 MINŪŠU DIAGNOSTIKA</span>
             </div>
@@ -1040,15 +1097,15 @@
                 
                 <div>
                   <h4 class="text-xl font-extrabold text-white">Imantas Auto Diagnostika</h4>
-                  <p class="text-sm text-slate-300 mt-1">Kurzemes prospekts 3G, Imanta (Rīga)</p>
+                  <p class="text-sm text-slate-300 mt-1 font-medium">Dumbrāja iela, Imanta (Rīga)</p>
                   <p class="text-xs text-amber-400 font-semibold mt-1">✓ Bezmaksas piebraukšana tieši pie boksa</p>
                 </div>
 
                 <div class="pt-2 flex flex-wrap justify-center gap-3">
                   <a href="tel:+37120000000" class="px-5 py-2.5 rounded-xl bg-amber-500 text-black font-extrabold text-xs hover:bg-amber-400 transition-colors">
-                    Zvanīt pirms braukšanas
+                    Zvanīt un ieņemt rindu
                   </a>
-                  <a href="https://wa.me/37120000000?text=Sveiki!%20Braucu%20uz%20diagnostiku%20Imantā." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-500 text-black font-extrabold text-xs hover:bg-emerald-400 transition-colors">
+                  <a href="https://wa.me/37120000000?text=Sveiki!%20Vēlos%20stāties%20rindā%20uz%20diagnostiku%20Dumbrāja%20ielā." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-500 text-black font-extrabold text-xs hover:bg-emerald-400 transition-colors">
                     WhatsApp ziņa
                   </a>
                 </div>
@@ -1056,7 +1113,7 @@
             </div>
 
             <div class="p-3 bg-slate-950 border-t border-slate-800 text-center text-[11px] text-slate-400">
-              💡 Padoms: Pirms piebraukšanas droši uzraksti WhatsApp vai piezvani, lai pārliecinātos par brīvu vietu!
+              💡 Padoms: Šobrīd rindā gaida <span class="queueLiveCount text-amber-400 font-bold">18</span> auto. Zvani vai raksti pirms braukšanas!
             </div>
           </div>
 
@@ -1076,27 +1133,37 @@
         <span>50 EUR / 15 minūtes</span>
       </div>
       <div class="text-center md:text-right">
-        <div>Kurzemes prospekts, Imanta, Rīga | Tel: <a href="tel:+37120000000" class="text-slate-400 hover:text-white underline">+371 20 000 000</a></div>
+        <div>Dumbrāja iela, Imanta, Rīga | Tel: <a href="tel:+37120000000" class="text-slate-400 hover:text-white underline">+371 20 000 000</a></div>
         <div class="mt-1 text-[11px] text-slate-600">© 2026 Imantas Auto Diagnostika. Visas tiesības aizsargātas.</div>
       </div>
     </div>
   </footer>
 
   <!-- MOBILE FIXED STICKY ACTION BAR (Piespraustā josla mobilajā tālrunī) -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-3 flex items-center gap-2 shadow-2xl">
-    <a href="tel:+37120000000" class="flex-1 py-3 px-3 rounded-xl bg-amber-500 active:bg-amber-400 text-black font-extrabold text-xs text-center flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/20">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-      </svg>
-      <span>Zvanīt (50 €)</span>
-    </a>
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-2.5 flex flex-col gap-1.5 shadow-2xl">
+    <div class="flex items-center justify-between text-[11px] px-2">
+      <span class="flex items-center gap-1.5 text-amber-400 font-semibold">
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+        Rindā: <strong class="queueLiveCount text-white font-mono">18</strong> auto
+      </span>
+      <span class="text-amber-300 font-bold">⚠️ Stājies rindā laicīgi!</span>
+    </div>
 
-    <a href="https://wa.me/37120000000?text=Sveiki!%20Vēlos%20noskaidrot%20par%20auto%20diagnostiku%20Imantā." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-3 rounded-xl bg-emerald-600 active:bg-emerald-500 text-white font-extrabold text-xs text-center flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-      </svg>
-      <span>WhatsApp</span>
-    </a>
+    <div class="flex items-center gap-2">
+      <a href="tel:+37120000000" class="flex-1 py-3 px-3 rounded-xl bg-amber-500 active:bg-amber-400 text-black font-extrabold text-xs text-center flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/20">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        <span>Zvanīt (50 €)</span>
+      </a>
+
+      <a href="https://wa.me/37120000000?text=Sveiki!%20Vēlos%20stāties%20rindā%20uz%20auto%20diagnostiku%20Dumbrāja%20ielā." target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-3 rounded-xl bg-emerald-600 active:bg-emerald-500 text-white font-extrabold text-xs text-center flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/20">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
   </div>
 
   <script type="module" src="./main.js"></script>
