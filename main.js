@@ -1,7 +1,7 @@
 // Imantas Auto Diagnostika - Interactivity Script
 import { allReviews } from './reviews-data.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   // 1. Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -442,4 +442,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize features
   initQueueCounter();
   initInfiniteReviews();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
