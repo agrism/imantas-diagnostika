@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </span>
               <span class="text-xs text-slate-400 font-mono">${item.system}</span>
             </div>
-            <h4 class="text-lg font-extrabold text-white mt-1.5">${item.title}</h4>
+            <h4 class="text-lg font-extrabold text-slate-900 mt-1.5">${item.title}</h4>
           </div>
           <div class="text-left sm:text-right shrink-0">
             <div class="text-[11px] text-slate-400 uppercase font-semibold">Bīstamības pakāpe</div>
@@ -117,21 +117,21 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="text-xs font-bold text-amber-400 uppercase tracking-wide flex items-center gap-1.5">
               <span>⚠️</span> Simptomi dzīvē
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">${item.symptom}</p>
+            <p class="text-xs text-slate-600 leading-relaxed">${item.symptom}</p>
           </div>
 
           <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1.5">
             <div class="text-xs font-bold text-cyan-400 uppercase tracking-wide flex items-center gap-1.5">
               <span>💬</span> Vienkāršā valodā
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">${item.plainMeaning}</p>
+            <p class="text-xs text-slate-600 leading-relaxed">${item.plainMeaning}</p>
           </div>
 
           <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1.5">
             <div class="text-xs font-bold text-emerald-400 uppercase tracking-wide flex items-center gap-1.5">
               <span>🔍</span> Biežākais cēlonis
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">${item.commonCause}</p>
+            <p class="text-xs text-slate-600 leading-relaxed">${item.commonCause}</p>
           </div>
 
         </div>
@@ -164,11 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => {
         t.classList.remove('active', 'bg-amber-500', 'text-black', 'border-amber-500');
-        t.classList.add('bg-slate-800', 'text-slate-300', 'border-slate-700');
+        t.classList.add('bg-slate-800', 'text-slate-600', 'border-slate-700');
       });
 
       tab.classList.add('active', 'bg-amber-500', 'text-black', 'border-amber-500');
-      tab.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-700');
+      tab.classList.remove('bg-slate-800', 'text-slate-600', 'border-slate-700');
 
       const codeKey = tab.getAttribute('data-code');
       renderErrorDetail(codeKey);
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createReviewCard(review) {
       const card = document.createElement('div');
-      card.className = 'p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4 hover:border-amber-500/40 transition-all flex flex-col justify-between shadow-xl';
+      card.className = 'p-6 rounded-2xl bg-white border border-slate-200 space-y-4 hover:border-amber-500/40 transition-all flex flex-col justify-between shadow-xl';
 
       card.innerHTML = `
         <div class="space-y-3">
@@ -374,15 +374,15 @@ document.addEventListener('DOMContentLoaded', () => {
             „${review.highlight}”
           </div>
 
-          <p class="text-slate-300 text-xs sm:text-sm italic leading-relaxed">
+          <p class="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
             "${review.text}"
           </p>
         </div>
 
-        <div class="pt-3 border-t border-slate-800/80 flex items-center gap-3">
+        <div class="pt-3 border-t border-slate-200 flex items-center gap-3">
           <img src="${review.avatar}" alt="${review.name}" class="w-10 h-10 rounded-full object-cover border border-amber-500/30" loading="lazy">
           <div class="text-xs">
-            <div class="font-bold text-white">${review.name}</div>
+            <div class="font-bold text-slate-900">${review.name}</div>
             <div class="text-amber-400 font-mono text-[11px]">${review.car}</div>
           </div>
         </div>
