@@ -34,12 +34,12 @@
 }
 
 .faq-item.active {
-  border-color: rgba(245, 158, 11, 0.6);
+  border-color: rgba(185, 28, 28, 0.6);
 }
 
 .faq-item.active .faq-icon {
   transform: rotate(180deg);
-  color: #d97706;
+  color: #b91c1c;
 }
 
 /* Custom scrollbar */

@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Katalizatora efektivitāte zem sliekšņa (Bank 1)',
       system: 'Dzinēja vadības bloks (ECU)',
       urgency: 'Vidēja • Var braukt, bet jānovērš',
-      urgencyColor: 'text-amber-400',
-      badgeColor: 'bg-amber-950 text-amber-400 border-amber-800',
+      urgencyColor: 'text-red-700 font-bold',
+      badgeColor: 'bg-red-50 text-red-700 border-red-300',
       symptom: 'Deg dzeltenā Check Engine lampiņa, auto gaita nemainās, vai nedaudz palielinās degvielas patēriņš.',
       plainMeaning: 'Vadības bloks fiksē, ka otrais skābekļa sensors (aiz katalizatora) rāda pārāk līdzīgus datus pirmajam sensoram. Katalizators vai nu nestrādā pilnvērtīgi, vai sensors melo.',
       commonCause: '80% gadījumu pie vainas ir bojāta aizmugurējā lambda zonde vai neliela izplūdes gāzu noplūde pie gofras, nevis pats katalizators!',
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Sistēma pārāk liesa (Bank 1 System Too Lean)',
       system: 'Degvielas un gaisa padeves sistēma',
       urgency: 'Vidēja • Ietekmē dinamiku un degvielas patēriņu',
-      urgencyColor: 'text-amber-400',
-      badgeColor: 'bg-amber-950 text-amber-400 border-amber-800',
+      urgencyColor: 'text-red-700 font-bold',
+      badgeColor: 'bg-red-50 text-red-700 border-red-300',
       symptom: 'Tukšgaitas apgriezienu svārstības ("peld"), vājāks uzrāviens no zemiem apgriezieniem, auksts dzinējs noslāpst.',
       plainMeaning: 'Dzinējā nonāk pārāk daudz gaisa vai pārāk maz benzīna/dīzeļa. Lambda zonde brīdina, ka maisījums sadeg ar lieku skābekli.',
       commonCause: 'Gaisa piesūkšana (ieplūdes kolektora blīve, saplaisājusi vakuuma trubiņa) vai netīrs gaisa masas mērītājs (MAF sensors).',
@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'ABS riteņa ātruma devējs / Hidrauliskais bloks',
       system: 'Bremžu un stabilitātes kontrole (ABS / ESP)',
       urgency: 'Augsta • Nedarbojas pretizslīde un ABS bremzēšana',
-      urgencyColor: 'text-amber-400',
-      badgeColor: 'bg-amber-950 text-amber-400 border-amber-800',
+      urgencyColor: 'text-red-700 font-bold',
+      badgeColor: 'bg-red-50 text-red-700 border-red-300',
       symptom: 'Deg ABS un dzeltenā ESP/slīdošas mašīnas lampiņa, nestrādā kruīza kontrole un kalnā braukšanas palīgs.',
       plainMeaning: 'ABS vadības bloks nesaņem impulsu signālu no konkrētā riteņa magnētiskā gredzena vai sensora.',
       commonCause: 'Nolauzts/apsūbējis riteņa ABS sensora vads, netīrs magnētiskais gredzens rumbā, vai vienkārši nolietojies 15-25 € vērts sensors.',
@@ -364,13 +364,13 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="space-y-3">
           <div class="flex items-center justify-between">
-            <div class="flex items-center gap-1 text-amber-400 text-sm tracking-wider">
+            <div class="flex items-center gap-1 text-amber-500 text-sm tracking-wider">
               ★★★★★
             </div>
             <span class="text-[11px] text-slate-500 font-mono">${review.date}</span>
           </div>
           
-          <div class="text-xs font-bold text-amber-300/90 bg-amber-500/10 px-2.5 py-1 rounded-lg border border-amber-500/20 inline-block">
+          <div class="text-xs font-bold text-red-800 bg-red-50 px-2.5 py-1 rounded-lg border border-red-200 inline-block">
             „${review.highlight}”
           </div>
 
@@ -380,10 +380,10 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <div class="pt-3 border-t border-slate-200 flex items-center gap-3">
-          <img src="${review.avatar}" alt="${review.name}" class="w-10 h-10 rounded-full object-cover border border-amber-500/30" loading="lazy">
+          <img src="${review.avatar}" alt="${review.name}" class="w-10 h-10 rounded-full object-cover border border-red-200" loading="lazy">
           <div class="text-xs">
             <div class="font-bold text-slate-900">${review.name}</div>
-            <div class="text-amber-400 font-mono text-[11px]">${review.car}</div>
+            <div class="text-red-700 font-mono text-[11px] font-semibold">${review.car}</div>
           </div>
         </div>
       `;
